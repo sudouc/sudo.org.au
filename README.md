@@ -1,13 +1,12 @@
-# # Sudo Web – sudo.org.au
+# Sudo Web – sudo.org.au
 
 
 ## Introduction
 
 This is the source code for http://sudo.org.au. It's built on plain HTML, JS and Sass CSS Compiler.
 
-As with any Sudo Project, we'll setup a standard working environment so everyone can work on the same playing field. For more informatino on Vagrant, visit:
-* http://vagrantup.com/v1/docs/getting-started/index.html
-* http://vagrantup.com/v1/docs/provisioners/chef_solo.html
+As with any Sudo Project, we'll setup a standard working environment so everyone can work on the same playing field. For more information on Vagrant, visit:
+* https://docs-v1.vagrantup.com/v1/docs/getting-started/index.html
 
 
 ## Getting started
