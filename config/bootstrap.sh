@@ -34,11 +34,12 @@ apachectl -k graceful
 
 
 # Install Node.js and npm
-sudo apt-get install nodejs
-sudo apt-get install npm
-sudo npm install npm -g
+apt-get install -q -y curl git
+
+curl -sL https://deb.nodesource.com/setup_6.x | bash -
+apt-get install -y nodejs
 
 # Install Bower and gulp
-sudo npm install bower -g
+npm install bower -g 
 
-cd /var/www && bower install sudo-web-framework
+cd /var/www && bower install sudo-web-framework --allow-root
