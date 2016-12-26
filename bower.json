@@ -1,0 +1,27 @@
+{
+  "name": "sudo-website",
+  "authors": [
+    "Alex Sinnott <chess2ryme@gmail.com> (https://alexsinnott.me/)"
+  ],
+  "description": "",
+  "keywords": [
+    "none"
+  ],
+  "license": "MIT",
+  "homepage": "https://sudo.org.au/",
+  "repository": {
+  	"type": "git",
+  	"url": "git://github.com/sudouc/sudo-web-framework.git"
+  },
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "private": true,
+  "dependencies": {
+      "sudo-web-framework": "~0.0.1"
+  }
+}

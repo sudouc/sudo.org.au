@@ -1,0 +1,78 @@
+@import "../../../bower_components/sudo-framework/scss/sudoweb";
+
+section {
+    &#hero {
+        @include sw-gradient("sudobg", false);
+
+
+        $content-height: 85vh;
+
+        width: 100%;
+        height: $content-height;
+        color: #FFF;
+
+        &:after {
+            display: block;
+            content: "";
+            width: 100%;
+            height: $content-height;
+            top: 0;
+            position: absolute;
+            background-image: url("/home/images/home-background.png");
+            background-size: cover;
+            background-position: center;
+            opacity: 0.3;
+            z-index: 1;
+        }
+
+        .row {
+            height: calc(100%);
+            z-index: 2;
+            position: relative;
+
+            h1 {
+                line-height: 25px;
+
+                b {
+                    font-weight: 500;
+                }
+                @include breakpoint(medium) {
+                    line-height: 50px;
+                }
+            }
+
+            h3 {
+                color: #d1e2ed;
+                font-size: 20px;
+            }
+        }
+    }
+
+    &#cards {
+        z-index: 3;
+        position: relative;
+        margin-top: -90px;
+
+        .column {
+            &:first-child {
+                @include breakpoint(medium) {
+                    padding-right: 0;
+                }
+            }
+        }
+
+        .callout {
+
+            @include breakpoint(medium) {
+                padding-left: 8rem;
+            }
+
+            h4 {
+                font-size: 20px;
+                color: #f34f29;
+            }
+
+        }
+    }
+
+}

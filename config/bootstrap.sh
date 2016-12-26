@@ -9,10 +9,6 @@ apt-get install -q -y apache2
 # symlink that to /var/www
 # this will be the pubic root of the site
 
-# configuration files live at /etc/apache2/
-rm -rf /var/www
-ln -fs /vagrant /var/www
-
 ################################################################################
 
 # Enable SSI following (mostly) the directions here:
@@ -40,6 +36,6 @@ curl -sL https://deb.nodesource.com/setup_6.x | bash -
 apt-get install -y nodejs
 
 # Install Bower and gulp
-npm install bower -g 
+npm install bower -g
 
 cd /var/www && bower install sudo-web-framework --allow-root
