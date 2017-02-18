@@ -1,4 +1,4 @@
-@import "../../../bower_components/sudo-framework/scss/sudoweb";
+@import "../../../bower_components/sudo-web-framework/scss/sudoweb";
 
 section {
     &#hero {
@@ -34,7 +34,7 @@ section {
                 line-height: 25px;
 
                 b {
-                    font-weight: 500;
+                    font-weight: 600;
                 }
                 @include breakpoint(medium) {
                     line-height: 50px;

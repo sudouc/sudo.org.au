@@ -1,4 +1,4 @@
-@import "../../../bower_components/sudo-framework/scss/sudoweb";
+@import "../../../bower_components/sudo-web-framework/scss/sudoweb";
 @include sw-everything(true);
 
 header {
@@ -7,6 +7,7 @@ header {
     max-height: 74px;
     z-index: 20;
     position: relative;
+    
     &.overlap {
         display: block;
         margin-bottom: -74px;

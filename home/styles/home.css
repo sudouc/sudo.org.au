@@ -49,7 +49,7 @@ section#hero {
     section#hero .row h1 {
       line-height: 25px; }
       section#hero .row h1 b {
-        font-weight: 500; }
+        font-weight: 600; }
       @media print, screen and (min-width: 40em) {
         section#hero .row h1 {
           line-height: 50px; } }
