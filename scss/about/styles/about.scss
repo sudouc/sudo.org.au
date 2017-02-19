@@ -1,0 +1,308 @@
+@import "../../../bower_components/sudo-web-framework/scss/sudoweb";
+
+section {
+    min-height: 700px;
+
+    .row {
+        min-height: 700px;
+        position: relative;
+    }
+
+    &#hero {
+        $content-height: 85vh;
+        background-image: url("/about/images/hero_background.jpg");
+        background-size: cover;
+        background-position: center;
+
+        width: 100%;
+        height: $content-height;
+        color: #FFF;
+        overflow-x: hidden;
+
+        .row {
+            height: calc(100%);
+            z-index: 2;
+            position: relative;
+
+            h1 {
+                margin-bottom: 0px;
+                line-height: 40px;
+
+                b {
+                    font-weight: 500;
+                }
+            }
+
+            h3 {
+                color: #ff9b98;
+                font-size: 26px;
+                margin-bottom: 20px;
+            }
+
+            a.button.more {
+                color: #ff4545;
+            }
+        }
+
+        figure.iphone {
+            position: absolute;
+            top: 20%;
+            right: -100px;
+            margin: 0;
+            background-image: url('/about/images/iphone_2x.png');
+            background-size: 588px 541px;
+            width: 588px;
+            height: 541px;
+        }
+    }
+
+    &#languages {
+        background-image: url("/about/images/languages_background.jpg");
+        background-size: cover;
+        background-position: center;
+        width: 100%;
+        color: #FFF;
+        overflow-x: hidden;
+
+        figure {
+            width: 299px;
+            height: 451px;
+            background-image: url('/about/images/languages_logo_2x.png');
+            background-size: 299px 451px;
+            position: absolute;
+            top: 120px;
+            left: -70px;
+        }
+
+        h2 {
+            color: #342b2b;
+            font-size: 2.3rem;
+            font-weight: 500;
+            margin: 0;
+            line-height: 40px;
+        }
+        h4 {
+            color: #ec4e48;
+        }
+        p {
+            color: #342b2b;
+        }
+    }
+    &#helloworld {
+        background-color: #1c1a19;
+        position:relative;
+
+        &:after {
+            display: block;
+            content: "";
+            width: 100%;
+            height: 100%;
+            top: 0;
+            position: absolute;
+            background-image: url("/about/images/helloworld_background.png");
+            background-size: cover;
+            background-position: center;
+            opacity: 1;
+            z-index: 1;
+        }
+
+        figure.logo {
+            background-image: url('/about/images/helloworld_logo.png');
+            background-size: 241px 241px;
+            height: 241px;
+            width: 241px;
+            float: right;
+        }
+
+        h2 {
+            color: #fff;
+            font-size: 2.3rem;
+            font-weight: 500;
+            margin: 0;
+            line-height: 40px;
+        }
+        h4 {
+            color: #ec4e48;
+        }
+        p {
+            color: #e8e8e8;
+        }
+    }
+
+    &#eightweek {
+        background-color: #fff;
+        position:relative;
+        padding: 50px 0;
+
+        .promo {
+            flex: 0 0 434px;
+            max-width: 434px;
+            margin-right: 50px;
+
+            .box{
+                background-image: url('/about/images/8w_promo_background.png');
+                background-repeat: none;
+                background-position: center;
+                background-size: 404px 582px;
+                height: 582px;
+                padding: 0 40px;
+
+                padding-top: 350px;
+
+                border-radius: 5px;
+                box-shadow: 0px 3px 65px 0px rgba(20, 72, 96, 0.09), 0px 3px 40px 0px rgba(20, 72, 96, 0.07), 0px 14px 40px 0px rgba(20, 72, 96, 0.07);
+            }
+
+            h4 {
+                color: #fff;
+            }
+            p {
+                color: #e8e8e8;
+            }
+            a {
+                color: #ec4e48;
+            }
+
+        }
+
+        h2 {
+            font-size: 2.3rem;
+            font-weight: 500;
+            margin: 0;
+            line-height: 40px;
+            color: #342b2b;
+        }
+        h4 {
+            color: #ec4e48;
+        }
+        p {
+            color: #342b2b;
+        }
+    }
+
+    &#cards {
+        z-index: 3;
+        position: relative;
+        margin-top: -90px;
+        height: auto;
+        min-height: auto;
+
+        .row {
+            min-height: auto;
+        }
+
+        .columns {
+            &:first-child {
+                @include breakpoint(medium) {
+                    // padding-right: 0;
+                }
+            }
+        }
+
+        .callout {
+            position: relative;
+            padding-left: 7rem;
+
+            @include breakpoint(medium) {
+                padding-left: 6rem;
+            }
+
+            h4 {
+                font-size: 20px;
+            }
+
+            p {
+                color: #cdcdcd;
+                transition: color 0.2s;
+            }
+
+            &:before {
+                content: " ";
+                display: block;
+                position: absolute;
+                left: 0;
+            }
+
+            &.github {
+
+                h4 {
+                    color: #f34f29;
+                }
+
+                &:before {
+                    background-image: url('/home/images/gitrepo_2x.png');
+                    background-size: 76px 91px;
+                    width: 76px;
+                    height: 91px;
+                }
+            }
+
+            &.ninja {
+                h4 {
+                    color: #774be3;
+                }
+
+                &:hover p {
+                    color: #d5c8f2;
+                }
+
+                &:before {
+                    background-image: url('/home/images/devninja_2x.png');
+                    background-size: 89px 115px;
+                    width: 89px;
+                    height: 115px;
+                    top: 20px;
+                }
+            }
+
+        }
+    }
+
+    &#router {
+        min-height: auto;
+        height: 250px;
+        background-image: url('/about/images/projects_router.jpg');
+        background-size: cover;
+        background-position: center;
+        overflow: hidden;
+        position: relative;
+
+        a:hover {
+            figure {
+                -moz-transform: translate(25px, -25px);
+                -webkit-transform: translate(25px, -25px);
+                -o-transform: translate(25px, -25px);
+                -ms-transform: translate(25px, -25px);
+                transform: translate(25px, -25px);
+
+            }
+        }
+
+        .row {
+            min-height: auto;
+            padding: 45px 0;
+        }
+
+        figure {
+            background-image: url('/about/images/router_iphones.png');
+            background-size: 679px 476px;
+            height: 476px;
+            width: 679px;
+            position: absolute;
+            top: 0;
+            right: 0;
+            transition: transform .3s;
+        }
+
+        h2 {
+            font-size: 2.3rem;
+            font-weight: 500;
+            margin: 0;
+            line-height: 40px;
+            color: #fff;
+        }
+        h5 {
+            color: #fff;
+        }
+    }
+}

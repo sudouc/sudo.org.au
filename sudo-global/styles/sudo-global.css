@@ -22,6 +22,15 @@
  * Height mesured in 1 to 5.
  * Adds Box-Shadow to elements
  */
+/*
+ * Height mesured in 1 to 5.
+ * Adds Box-Shadow to elements
+ */
+/*
+ * Height mesured in 1 to 5.
+ * Adds Box-Shadow to elements
+ */
+/* Gradients */
 /*! normalize-scss | MIT/GPLv2 License | bit.ly/normalize-scss */
 /* Document
        ========================================================================== */
@@ -3897,6 +3906,9 @@ a.thumbnail {
   .large-order-6 {
     order: 6; } }
 
+.button {
+  font-weight: 500; }
+
 header {
   padding: 27px 0;
   max-height: 74px;
@@ -3938,8 +3950,11 @@ header {
     position: absolute;
     margin-top: 27px;
     content: ""; }
-  header #join {
-    margin: 0; }
+  header .signin {
+    color: #FFF;
+    font-family: 'Circular Std'; }
+    header .signin:hover {
+      color: rgba(255, 255, 255, 0.8); }
   header .logo {
     width: 65px;
     height: 20px;
@@ -3951,3 +3966,8 @@ footer {
     display: block;
     font-size: 11px;
     color: #aaaaaa; }
+  footer .unican {
+    background-image: url("/sudo-global/images/unican_2x.png");
+    background-size: 89px 18px;
+    width: 89px;
+    height: 18px; }

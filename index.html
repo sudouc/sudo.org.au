@@ -3,30 +3,17 @@
 
 <head>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!--#include virtual="/sudo-global/includes/global-ie9.inc" -->
+
 	<title>Sudo – UC’s premiere Kickstarting and Coding Society</title>
-	<link rel="stylesheet" href="/sudo-global/styles/sudo-global.css" />
+	<!--#include virtual="/sudo-global/includes/global-meta.inc" -->
+
+	<!--#include virtual="/sudo-global/includes/global-styles.inc" -->
 	<link rel="stylesheet" href="/home/styles/home.css" />
 </head>
 
 <body>
-	<header class="overlap"  data-sticky-container>
-		<div class="row">
-			<div class="column">
-				<a href="#">
-					<div class="logo"></div>
-				</a>
-			</div>
-			<div class="column text-center show-for-medium">
-				<nav>
-				</nav>
-			</div>
-			<div class="column text-right">
-				<div class="mobile-menu hide-for-medium"></div>
-				<a href="" id="join" class="button success small wide show-for-medium">Join Sudo</a>
-			</div>
-		</div>
-	</header>
+	<!--#include virtual="/sudo-global/includes/header.inc" -->
 
 	<section id="hero">
 
@@ -34,47 +21,36 @@
 		<div class="row align-middle">
 			<div class="small-12 small-centered columns text-center">
 				<h1>Start your coding career with&nbsp;<b>Sudo</b>.</h1>
-				<h3>
-					Sudo is UC’s premiere Kickstarting and Coding Society.<br>
-					<small>Website Coming Soon</small>
-				</h3>
+				<h3>Sudo is UC’s premiere Kickstarting and Coding Society.</h3>
+		        <a href="" class="button success">Join Sudo</a>
+		        <a href="" class="button white">Find Out More</a>
 			</div>
 		</div>
 	</section>
 
 	<section id="cards">
-		<div class="row ">
-			<div class="column">
+		<div class="row">
+			<div class="small-12 medium-6 columns">
 				<a href="#">
-					<div class="callout">
+					<div class="callout github">
 						<h4>Sudo on GitHub</h4>
 						<p>Browse the Git Repo or Share your own project with everyone.</p>
 					</div>
 				</a>
 			</div>
-			<div class="column">
+			<div class="small-12 medium-6 columns">
 				<a href="#">
-					<div class="callout">
+					<div class="callout ninja">
 						<h4>Become a Ninja Developer</h4>
 						<p>Gain knowledge, learn industry standard skills and become a real developer.</p>
 					</div>
 				</a>
 			</div>
 		</div>
+	</section>
 
-	<footer class="row">
-		<div class="column">
+	<!--#include virtual="/sudo-global/includes/footer.inc" -->
 
-		<div class="legal float-right">Copyright &copy; 2017 UCSudo All Rights Reserved.</div>
-		</div>
-	</footer>
-
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.0/js/foundation.min.js" charset="utf-8"></script>
-
-	<script type="text/javascript">
-		$(document).foundation();
-	</script>
 </body>
 
 </html>

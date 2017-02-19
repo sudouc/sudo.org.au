@@ -30,6 +30,12 @@ section#hero {
   width: 100%;
   height: 85vh;
   color: #FFF; }
+  section#hero:hover {
+    background: #aa1aff;
+    /* Old browsers */
+    background-image: -moz-linear-gradient(11deg, #aa1aff 0%, #69c1ff 100%);
+    background-image: -webkit-linear-gradient(11deg, #aa1aff 0%, #69c1ff 100%);
+    background-image: -ms-linear-gradient(11deg, #aa1aff 0%, #69c1ff 100%); }
   section#hero:after {
     display: block;
     content: "";
@@ -37,10 +43,10 @@ section#hero {
     height: 85vh;
     top: 0;
     position: absolute;
-    background-image: url("/home/images/home-background.png");
+    background-image: url("/home/images/home-background.jpg");
     background-size: cover;
     background-position: center;
-    opacity: 0.3;
+    opacity: 1;
     z-index: 1; }
   section#hero .row {
     height: calc(100%);
@@ -61,12 +67,36 @@ section#cards {
   z-index: 3;
   position: relative;
   margin-top: -90px; }
-  @media print, screen and (min-width: 40em) {
-    section#cards .column:first-child {
-      padding-right: 0; } }
-  @media print, screen and (min-width: 40em) {
-    section#cards .callout {
-      padding-left: 8rem; } }
-  section#cards .callout h4 {
-    font-size: 20px;
-    color: #f34f29; }
+  section#cards .callout {
+    position: relative;
+    padding-left: 7rem; }
+    @media print, screen and (min-width: 40em) {
+      section#cards .callout {
+        padding-left: 6rem; } }
+    section#cards .callout h4 {
+      font-size: 20px; }
+    section#cards .callout p {
+      color: #cdcdcd;
+      transition: color 0.2s; }
+    section#cards .callout:before {
+      content: " ";
+      display: block;
+      position: absolute;
+      left: 0; }
+    section#cards .callout.github h4 {
+      color: #f34f29; }
+    section#cards .callout.github:before {
+      background-image: url("/home/images/gitrepo_2x.png");
+      background-size: 76px 91px;
+      width: 76px;
+      height: 91px; }
+    section#cards .callout.ninja h4 {
+      color: #774be3; }
+    section#cards .callout.ninja:hover p {
+      color: #d5c8f2; }
+    section#cards .callout.ninja:before {
+      background-image: url("/home/images/devninja_2x.png");
+      background-size: 89px 115px;
+      width: 89px;
+      height: 115px;
+      top: 20px; }

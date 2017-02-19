@@ -1,17 +1,24 @@
 @import "../../../bower_components/sudo-web-framework/scss/sudoweb";
+@import "settings";
 @include sw-everything(true);
 
+
+.button {
+    font-weight: 500;
+}
+section {
+
+}
 header {
     $header-padding: 27px;
     padding: $header-padding 0;
     max-height: 74px;
     z-index: 20;
     position: relative;
-    
+
     &.overlap {
         display: block;
         margin-bottom: -74px;
-
     }
 
     ul.menu {
@@ -43,8 +50,13 @@ header {
         content: "";
     }
 
-    #join {
-        margin: 0;
+    .signin {
+        color: #FFF;
+        font-family: 'Circular Std';
+
+        &:hover {
+            color: rgba(255,255,255, 0.8);
+        }
     }
 
     .logo {
@@ -61,5 +73,12 @@ footer {
         display: block;
         font-size: 11px;
         color: rgb(170, 170, 170);
+    }
+
+    .unican {
+        background-image: url('/sudo-global/images/unican_2x.png');
+        background-size: 89px 18px;
+        width: 89px;
+        height: 18px;
     }
 }
