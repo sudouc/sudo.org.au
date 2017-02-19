@@ -69,6 +69,10 @@ header {
 
 footer {
     margin: 20px 0 100px 0;
+
+    .column {
+        position: relative;
+    }
     .legal {
         display: block;
         font-size: 11px;
@@ -80,5 +84,7 @@ footer {
         background-size: 89px 18px;
         width: 89px;
         height: 18px;
+        position: absolute;
+        right: 0;
     }
 }

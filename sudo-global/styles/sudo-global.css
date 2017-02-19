@@ -3962,6 +3962,8 @@ header {
 
 footer {
   margin: 20px 0 100px 0; }
+  footer .column, footer .columns {
+    position: relative; }
   footer .legal {
     display: block;
     font-size: 11px;
@@ -3970,4 +3972,6 @@ footer {
     background-image: url("/sudo-global/images/unican_2x.png");
     background-size: 89px 18px;
     width: 89px;
-    height: 18px; }
+    height: 18px;
+    position: absolute;
+    right: 0; }
