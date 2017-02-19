@@ -5,3 +5,4 @@ config.code*
 *.scssc
 .DS_Store
 custom-hosts
+.tag*
