@@ -22,6 +22,6 @@
   ],
   "private": true,
   "dependencies": {
-      "sudo-web-framework": "~0.0.1"
+      "sudo-web-framework": "~0.0.9"
   }
 }

@@ -99,6 +99,9 @@ $global-text-direction: ltr;
 $global-flexbox: false;
 $print-transparent-backgrounds: true;
 
+@include add-sw-colors;
+$font-directory: "/sudo-global/fonts/";
+
 // 2. Breakpoints
 // --------------
 
