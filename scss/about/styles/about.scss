@@ -92,7 +92,7 @@ section {
         background-color: #1c1a19;
         position:relative;
 
-        &:after {
+        &:before {
             display: block;
             content: "";
             width: 100%;
@@ -103,7 +103,7 @@ section {
             background-size: cover;
             background-position: center;
             opacity: 1;
-            z-index: 1;
+            z-index: 0;
         }
 
         figure.logo {

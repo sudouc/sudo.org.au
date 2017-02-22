@@ -1,7 +1,7 @@
 /**
- * sw for Sites by ZURB
+ * sw for Sites by Sudo
  * Version 6.3.0
- * sw.zurb.com
+ * sudo.org.au
  * Licensed under MIT Open Source
  */
 /*
@@ -86,7 +86,7 @@ section {
   section#helloworld {
     background-color: #1c1a19;
     position: relative; }
-    section#helloworld:after {
+    section#helloworld:before {
       display: block;
       content: "";
       width: 100%;
@@ -97,7 +97,7 @@ section {
       background-size: cover;
       background-position: center;
       opacity: 1;
-      z-index: 1; }
+      z-index: 0; }
     section#helloworld figure.logo {
       background-image: url("/about/images/helloworld_logo.png");
       background-size: 241px 241px;
