@@ -22,7 +22,7 @@
 		</div>
 		<div class="column text-right">
 			<div class="mobile-menu hide-for-medium"></div>
-			<a href="" class="signin show-for-medium">Sign In</a>
+			<!-- <a href="#" class="signin show-for-medium">Sign In</a> -->
 		</div>
 	</div>
 </header>

@@ -1,9 +1,11 @@
 @import "../../../bower_components/sudo-web-framework/scss/sudoweb";
 
+html, body {
+	background-color: #fafafa;
+}
 section {
 
     .row {
-        min-height: 700px;
         position: relative;
     }
 
@@ -62,64 +64,218 @@ section {
     }
 
 
-	.callout {
-		position: relative;
-		margin-top: -100px;
-		text-align: center;
-		padding-bottom: 360px;
-
-		@include breakpoint(large) {
-            text-align: left;
-			min-height: 318px;
-			padding-bottom: 0;
-			padding-top: 50px;
-        }
-
-
-		h2 {
-			font-weight: 600;
-			font-size: 2rem;
-			color: #a22ac6;
-		}
-
-		p {
-			color: #AAA;
-		}
-
-		a.button {
-			color: #FFF;
-		  background-image: -moz-linear-gradient( 5deg, rgb(84,21,117) 0%, rgb(144,50,150) 100%);
-		  background-image: -webkit-linear-gradient( 5deg, rgb(84,21,117) 0%, rgb(144,50,150) 100%);
-		  background-image: -ms-linear-gradient( 5deg, rgb(84,21,117) 0%, rgb(144,50,150) 100%);
-
-		  &:hover {
-			  color: #FFF;
-		  }
-		}
-
-		figure.mic {
-			height: 318px;
-			width: 100%;
-			margin: 0;
-			position: absolute;
-			bottom: 0;
-			left: 0;
-			background-image: url('/pitch/images/mic_2x.png');
-			background-size: 325px 318px;
-			background-position: center;
-			background-repeat: no-repeat;
-			//display: none;
+	&#need {
+		.callout {
+			position: relative;
+			margin-top: -100px;
+			text-align: center;
+			padding-bottom: 360px;
 
 			@include breakpoint(large) {
-				width: 325px;
+	            text-align: left;
+				min-height: 318px;
+				padding-bottom: 0;
+				padding-top: 50px;
+	        }
+
+
+			h2 {
+				font-weight: 600;
+				font-size: 2rem;
+				color: #a22ac6;
+			}
+
+			p {
+				color: #AAA;
+			}
+
+			a.button {
+				color: #FFF;
+				background-image: -moz-linear-gradient( 5deg, rgb(84,21,117) 0%, rgb(144,50,150) 100%);
+				background-image: -webkit-linear-gradient( 5deg, rgb(84,21,117) 0%, rgb(144,50,150) 100%);
+				background-image: -ms-linear-gradient( 5deg, rgb(84,21,117) 0%, rgb(144,50,150) 100%);
+
+				&:hover {
+					color: #FFF;
+				}
+			}
+
+			figure.mic {
+				height: 318px;
+				width: 100%;
+				margin: 0;
 				position: absolute;
-				top: 0;
-				left: auto;
-				right: 0;
-                display: block;
-            }
+				bottom: 0;
+				left: 0;
+				background-image: url('/pitch/images/mic_2x.png');
+				background-size: 325px 318px;
+				background-position: center;
+				background-repeat: no-repeat;
+				//display: none;
+
+				@include breakpoint(large) {
+					width: 325px;
+					position: absolute;
+					top: 0;
+					left: auto;
+					right: 0;
+	                display: block;
+	            }
+			}
 		}
 
+	}
 
+	&#steps {
+		h3 {
+			color: #a22ac6;
+			font-size: 24px;
+			margin: 0;
+			margin-bottom: -10px;
+		}
+		h4 {
+			font-size: 31px;
+			color: #6a1f81;
+			margin: 0;
+		}
+
+		.row {
+			margin-top: 5rem;
+
+			&.margin-top {
+				margin-top: 2rem;
+			}
+
+			.one, .two, .three {
+				.count-img {
+					width: 65px;
+					height: 65px;
+					background-size: 65px 65px;
+					margin: 0 auto;
+				}
+			}
+			.one {
+				.count-img {
+					background-image: url('/pitch/images/count_1.png');
+				}
+			}
+			.two {
+				.count-img {
+					background-image: url('/pitch/images/count_2.png');
+				}
+			}
+			.three {
+				.count-img {
+					background-image: url('/pitch/images/count_3.png');
+				}
+			}
+
+			span.title {
+				text-align: center;
+				display: block;
+				font-size: 20px;
+				color: #a22ac6;
+				margin-bottom: 20px;
+			}
+
+			p {
+				text-align: justify;
+				color: #AAA;
+			}
+		}
+	}
+
+	&#cat {
+		padding-top: 90px;
+		background-image: url("/pitch/images/bg_2x.jpg");
+        background-size: cover;
+		width: 100%;
+		height: 350px;
+		background-position: top;
+
+		h3 {
+			color: #FFF;
+		}
+		a {
+            color: #8f61c2;
+		}
+	}
+
+	&#cards {
+		z-index: 3;
+		position: relative;
+		margin-top: -90px;
+		height: auto;
+		min-height: auto;
+
+		.row {
+			min-height: auto;
+		}
+
+		.columns {
+			&:first-child {
+				@include breakpoint(medium) {
+					// padding-right: 0;
+				}
+			}
+		}
+
+		.callout {
+			position: relative;
+			padding-left: 7rem;
+
+			@include breakpoint(medium) {
+				padding-left: 6rem;
+			}
+
+			h4 {
+				font-size: 20px;
+			}
+
+			p {
+				color: #cdcdcd;
+				transition: color 0.2s;
+			}
+
+			&:before {
+				content: " ";
+				display: block;
+				position: absolute;
+				left: 0;
+			}
+
+			&.github {
+
+				h4 {
+					color: #f34f29;
+				}
+
+				&:before {
+					background-image: url('/home/images/gitrepo_2x.png');
+					background-size: 76px 91px;
+					width: 76px;
+					height: 91px;
+				}
+			}
+
+			&.ninja {
+				h4 {
+					color: #774be3;
+				}
+
+				&:hover p {
+					color: #d5c8f2;
+				}
+
+				&:before {
+					background-image: url('/home/images/devninja_2x.png');
+					background-size: 89px 115px;
+					width: 89px;
+					height: 115px;
+					top: 20px;
+				}
+			}
+
+		}
 	}
 }
