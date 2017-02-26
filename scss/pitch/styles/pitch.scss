@@ -1,0 +1,139 @@
+@import "../../../bower_components/sudo-web-framework/scss/sudoweb";
+
+section {
+
+    .row {
+        min-height: 700px;
+        position: relative;
+    }
+
+    &#hero {
+        $content-height: 85vh;
+        background-image: url("/projects/images/hero_background.jpg");
+        background-size: cover;
+        background-position: center;
+
+        width: 100%;
+        height: $content-height;
+        color: #FFF;
+        overflow: hidden;
+
+        .row {
+            height: calc(100%);
+            z-index: 2;
+            position: relative;
+
+            h1 {
+                margin-bottom: 0px;
+                line-height: 40px;
+
+                b {
+                    font-weight: 500;
+                }
+            }
+
+            h3 {
+                color: #76e163;
+                font-size: 26px;
+                margin-bottom: 20px;
+            }
+
+            p {
+                color: #a9ed9d;
+            }
+
+            a.button.more {
+                color: #4eb953;
+            }
+        }
+
+        figure.macbook {
+            position: absolute;
+            top: 20%;
+            right: -411px;
+            margin: 0;
+            background-image: url('/projects/images/hero_macbook.png');
+            background-size: 947px 823px;
+            width: 947px;
+            height: 823px;
+        }
+    }
+
+    &#cards {
+        z-index: 3;
+        position: relative;
+        margin-top: -90px;
+        height: auto;
+        min-height: auto;
+
+        .row {
+            min-height: auto;
+        }
+
+        .columns {
+            &:first-child {
+                @include breakpoint(medium) {
+                    // padding-right: 0;
+                }
+            }
+        }
+
+        .callout {
+            position: relative;
+            padding-left: 7rem;
+
+            @include breakpoint(medium) {
+                padding-left: 6rem;
+            }
+
+            h4 {
+                font-size: 20px;
+            }
+
+            p {
+                color: #cdcdcd;
+                transition: color 0.2s;
+            }
+
+            &:before {
+                content: " ";
+                display: block;
+                position: absolute;
+                left: 0;
+            }
+
+            &.github {
+
+                h4 {
+                    color: #f34f29;
+                }
+
+                &:before {
+                    background-image: url('/home/images/gitrepo_2x.png');
+                    background-size: 76px 91px;
+                    width: 76px;
+                    height: 91px;
+                }
+            }
+
+            &.ninja {
+                h4 {
+                    color: #774be3;
+                }
+
+                &:hover p {
+                    color: #d5c8f2;
+                }
+
+                &:before {
+                    background-image: url('/home/images/devninja_2x.png');
+                    background-size: 89px 115px;
+                    width: 89px;
+                    height: 115px;
+                    top: 20px;
+                }
+            }
+
+        }
+    }
+}
