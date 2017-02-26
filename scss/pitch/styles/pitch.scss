@@ -127,6 +127,8 @@ section {
 	}
 
 	&#steps {
+		margin: 5rem 0;
+
 		h3 {
 			color: #a22ac6;
 			font-size: 24px;
@@ -140,8 +142,6 @@ section {
 		}
 
 		.row {
-			margin-top: 5rem;
-
 			&.margin-top {
 				margin-top: 2rem;
 			}

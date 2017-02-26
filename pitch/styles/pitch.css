@@ -106,19 +106,17 @@ section#need .callout {
         right: 0;
         display: block; } }
 
-section#steps h3 {
-  color: #a22ac6;
-  font-size: 24px;
-  margin: 0;
-  margin-bottom: -10px; }
-
-section#steps h4 {
-  font-size: 31px;
-  color: #6a1f81;
-  margin: 0; }
-
-section#steps .row {
-  margin-top: 5rem; }
+section#steps {
+  margin: 5rem 0; }
+  section#steps h3 {
+    color: #a22ac6;
+    font-size: 24px;
+    margin: 0;
+    margin-bottom: -10px; }
+  section#steps h4 {
+    font-size: 31px;
+    color: #6a1f81;
+    margin: 0; }
   section#steps .row.margin-top {
     margin-top: 2rem; }
   section#steps .row .one .count-img, section#steps .row .two .count-img, section#steps .row .three .count-img {
