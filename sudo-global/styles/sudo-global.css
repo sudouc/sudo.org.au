@@ -1051,7 +1051,7 @@ button {
 
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
   @font-face {
-    font-family: 'Camphor';
+    font-family: 'Circular Std';
     src: url("/sudo-global/fonts/CircularStd-Black.svg#69f4a7954d9815defd5c51897ccaf059") format("svg");
     /* Legacy iOS */ } }
 
@@ -1066,7 +1066,7 @@ button {
 
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
   @font-face {
-    font-family: 'Camphor';
+    font-family: 'Circular Std';
     src: url("/sudo-global/fonts/CircularStd-Bold.svg#b333381778fc1f96de44d359c7f8b95e") format("svg");
     /* Legacy iOS */ } }
 
@@ -1081,7 +1081,7 @@ button {
 
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
   @font-face {
-    font-family: 'Camphor';
+    font-family: 'Circular Std';
     src: url("/sudo-global/fonts/CircularStd-Book.svg#dd452d63ae05ddb466f19713a7d09fd5") format("svg");
     /* Legacy iOS */ } }
 
@@ -1096,7 +1096,7 @@ button {
 
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
   @font-face {
-    font-family: 'Camphor';
+    font-family: 'Circular Std';
     src: url("/sudo-global/fonts/CircularStd-Medium.svg#a81919819e5d11fb78ee7eadc8883b0d") format("svg");
     /* Legacy iOS */ } }
 
