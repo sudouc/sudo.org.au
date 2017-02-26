@@ -26,7 +26,7 @@ section .row {
   position: relative; }
 
 section#hero {
-  background-image: url("/projects/images/hero_background.jpg");
+  background-image: url("/pitch/images/bg_2x.jpg");
   background-size: cover;
   background-position: center;
   width: 100%;
@@ -38,66 +38,68 @@ section#hero {
     z-index: 2;
     position: relative; }
     section#hero .row h1 {
+      font-size: 3rem;
       margin-bottom: 0px;
-      line-height: 40px; }
+      line-height: 45px; }
+      section#hero .row h1 small {
+        font-size: 30px;
+        font-weight: 600;
+        color: #FFF; }
       section#hero .row h1 b {
         font-weight: 500; }
     section#hero .row h3 {
-      color: #76e163;
-      font-size: 26px;
+      color: #dcabe5;
+      font-size: 28px;
       margin-bottom: 20px; }
     section#hero .row p {
-      color: #a9ed9d; }
-    section#hero .row a.button.more {
-      color: #4eb953; }
-  section#hero figure.macbook {
-    position: absolute;
-    top: 20%;
-    right: -411px;
-    margin: 0;
-    background-image: url("/projects/images/hero_macbook.png");
-    background-size: 947px 823px;
-    width: 947px;
-    height: 823px; }
-
-section#cards {
-  z-index: 3;
-  position: relative;
-  margin-top: -90px;
-  height: auto;
-  min-height: auto; }
-  section#cards .row {
-    min-height: auto; }
-  section#cards .callout {
-    position: relative;
-    padding-left: 7rem; }
-    @media print, screen and (min-width: 40em) {
-      section#cards .callout {
-        padding-left: 6rem; } }
-    section#cards .callout h4 {
+      color: #dcabe5;
       font-size: 20px; }
-    section#cards .callout p {
-      color: #cdcdcd;
-      transition: color 0.2s; }
-    section#cards .callout:before {
-      content: " ";
-      display: block;
-      position: absolute;
-      left: 0; }
-    section#cards .callout.github h4 {
-      color: #f34f29; }
-    section#cards .callout.github:before {
-      background-image: url("/home/images/gitrepo_2x.png");
-      background-size: 76px 91px;
-      width: 76px;
-      height: 91px; }
-    section#cards .callout.ninja h4 {
-      color: #774be3; }
-    section#cards .callout.ninja:hover p {
-      color: #d5c8f2; }
-    section#cards .callout.ninja:before {
-      background-image: url("/home/images/devninja_2x.png");
-      background-size: 89px 115px;
-      width: 89px;
-      height: 115px;
-      top: 20px; }
+      section#hero .row p span {
+        display: block;
+        color: #FFF; }
+    section#hero .row a.button.more {
+      color: #8f61c2; }
+
+section .callout {
+  position: relative;
+  margin-top: -100px;
+  text-align: center;
+  padding-bottom: 360px; }
+  @media print, screen and (min-width: 64em) {
+    section .callout {
+      text-align: left;
+      min-height: 318px;
+      padding-bottom: 0;
+      padding-top: 50px; } }
+  section .callout h2 {
+    font-weight: 600;
+    font-size: 2rem;
+    color: #a22ac6; }
+  section .callout p {
+    color: #AAA; }
+  section .callout a.button {
+    color: #FFF;
+    background-image: -moz-linear-gradient(5deg, #541575 0%, #903296 100%);
+    background-image: -webkit-linear-gradient(5deg, #541575 0%, #903296 100%);
+    background-image: -ms-linear-gradient(5deg, #541575 0%, #903296 100%); }
+    section .callout a.button:hover {
+      color: #FFF; }
+  section .callout figure.mic {
+    height: 318px;
+    width: 100%;
+    margin: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-image: url("/pitch/images/mic_2x.png");
+    background-size: 325px 318px;
+    background-position: center;
+    background-repeat: no-repeat; }
+    @media print, screen and (min-width: 64em) {
+      section .callout figure.mic {
+        width: 325px;
+        position: absolute;
+        top: 0;
+        left: auto;
+        right: 0;
+        display: block; } }

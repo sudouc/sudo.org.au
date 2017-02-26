@@ -9,7 +9,7 @@ section {
 
     &#hero {
         $content-height: 85vh;
-        background-image: url("/projects/images/hero_background.jpg");
+        background-image: url("/pitch/images/bg_2x.jpg");
         background-size: cover;
         background-position: center;
 
@@ -24,8 +24,15 @@ section {
             position: relative;
 
             h1 {
+				font-size: 3rem;
                 margin-bottom: 0px;
-                line-height: 40px;
+                line-height: 45px;
+
+				small {
+					font-size: 30px;
+					font-weight: 600;
+					color: #FFF;
+				}
 
                 b {
                     font-weight: 500;
@@ -33,107 +40,86 @@ section {
             }
 
             h3 {
-                color: #76e163;
-                font-size: 26px;
+                color: #dcabe5;
+                font-size: 28px;
                 margin-bottom: 20px;
             }
 
             p {
-                color: #a9ed9d;
+                color: #dcabe5;
+				font-size: 20px;
+
+				span {
+					display: block;
+					color: #FFF;
+				}
             }
 
             a.button.more {
-                color: #4eb953;
+                color: #8f61c2;
             }
-        }
-
-        figure.macbook {
-            position: absolute;
-            top: 20%;
-            right: -411px;
-            margin: 0;
-            background-image: url('/projects/images/hero_macbook.png');
-            background-size: 947px 823px;
-            width: 947px;
-            height: 823px;
         }
     }
 
-    &#cards {
-        z-index: 3;
-        position: relative;
-        margin-top: -90px;
-        height: auto;
-        min-height: auto;
 
-        .row {
-            min-height: auto;
+	.callout {
+		position: relative;
+		margin-top: -100px;
+		text-align: center;
+		padding-bottom: 360px;
+
+		@include breakpoint(large) {
+            text-align: left;
+			min-height: 318px;
+			padding-bottom: 0;
+			padding-top: 50px;
         }
 
-        .columns {
-            &:first-child {
-                @include breakpoint(medium) {
-                    // padding-right: 0;
-                }
-            }
-        }
 
-        .callout {
-            position: relative;
-            padding-left: 7rem;
+		h2 {
+			font-weight: 600;
+			font-size: 2rem;
+			color: #a22ac6;
+		}
 
-            @include breakpoint(medium) {
-                padding-left: 6rem;
-            }
+		p {
+			color: #AAA;
+		}
 
-            h4 {
-                font-size: 20px;
-            }
+		a.button {
+			color: #FFF;
+		  background-image: -moz-linear-gradient( 5deg, rgb(84,21,117) 0%, rgb(144,50,150) 100%);
+		  background-image: -webkit-linear-gradient( 5deg, rgb(84,21,117) 0%, rgb(144,50,150) 100%);
+		  background-image: -ms-linear-gradient( 5deg, rgb(84,21,117) 0%, rgb(144,50,150) 100%);
 
-            p {
-                color: #cdcdcd;
-                transition: color 0.2s;
-            }
+		  &:hover {
+			  color: #FFF;
+		  }
+		}
 
-            &:before {
-                content: " ";
+		figure.mic {
+			height: 318px;
+			width: 100%;
+			margin: 0;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			background-image: url('/pitch/images/mic_2x.png');
+			background-size: 325px 318px;
+			background-position: center;
+			background-repeat: no-repeat;
+			//display: none;
+
+			@include breakpoint(large) {
+				width: 325px;
+				position: absolute;
+				top: 0;
+				left: auto;
+				right: 0;
                 display: block;
-                position: absolute;
-                left: 0;
             }
+		}
 
-            &.github {
 
-                h4 {
-                    color: #f34f29;
-                }
-
-                &:before {
-                    background-image: url('/home/images/gitrepo_2x.png');
-                    background-size: 76px 91px;
-                    width: 76px;
-                    height: 91px;
-                }
-            }
-
-            &.ninja {
-                h4 {
-                    color: #774be3;
-                }
-
-                &:hover p {
-                    color: #d5c8f2;
-                }
-
-                &:before {
-                    background-image: url('/home/images/devninja_2x.png');
-                    background-size: 89px 115px;
-                    width: 89px;
-                    height: 115px;
-                    top: 20px;
-                }
-            }
-
-        }
-    }
+	}
 }
