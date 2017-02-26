@@ -7,7 +7,7 @@
 			</a>
 		</div>
 		<div class="small-12 medium-6 columns">
-			<a href="#" class="callout ninja">
+			<a href="/about/" class="callout ninja">
 				<h4>Become a Ninja Developer</h4>
 				<p>Gain knowledge, learn industry standard skills and become a real developer.</p>
 			</a>
