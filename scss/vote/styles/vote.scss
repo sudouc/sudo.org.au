@@ -1,0 +1,95 @@
+@import "../../../bower_components/sudo-web-framework/scss/sudoweb";
+
+html, body {
+	background-color: #fafafa;
+}
+section {
+
+    .row {
+        position: relative;
+    }
+
+    &#hero {
+        $content-height: 200px;
+        background-image: url("/pitch/images/bg_2x.jpg");
+        background-size: cover;
+        background-position: center;
+
+        width: 100%;
+        height: $content-height;
+        color: #FFF;
+        overflow: hidden;
+
+        .row {
+            height: calc(100%);
+            z-index: 2;
+            position: relative;
+
+            h1 {
+				font-size: 3rem;
+                margin-bottom: 0px;
+                line-height: 45px;
+
+				small {
+					font-size: 30px;
+					font-weight: 600;
+					color: #FFF;
+				}
+
+                b {
+                    font-weight: 500;
+                }
+            }
+
+            h3 {
+                color: #dcabe5;
+                font-size: 28px;
+                margin-bottom: 20px;
+            }
+
+            p {
+                color: #dcabe5;
+				font-size: 20px;
+
+				span {
+					display: block;
+					color: #FFF;
+				}
+            }
+
+            a.button.more {
+                color: #8f61c2;
+            }
+        }
+    }
+
+	&#voting {
+		padding-top: 50px;
+
+		.selection {
+			transition: background 0.2s, color 0.2s, border 0.2s;
+			width: 100%;
+			margin: 20px 0;
+			background-color: #eee;
+			padding: 20px 40px;
+			border-left: solid 4px #bd41cf;
+
+			&.voted {
+				background-color: #bd41cf;
+				color: #FFF;
+
+				&:before {
+					content: '⟩  ';
+
+				}
+			}
+
+			&.disabled {
+				background-color: #a2a2a2;
+				border-left: none;
+				color: #CCC;
+			}
+		}
+	}
+
+}
