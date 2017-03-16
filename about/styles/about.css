@@ -27,13 +27,16 @@ section {
     min-height: 700px;
     position: relative; }
   section#hero {
-    background-image: url("/about/images/hero_background.jpg");
+    background-image: url("/about/images/hero_background_large.jpg");
     background-size: cover;
     background-position: center;
     width: 100%;
     height: 85vh;
     color: #FFF;
     overflow-x: hidden; }
+    @media screen and (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+      section#hero {
+        background-image: url("/about/images/hero_background_large_2x.jpg"); } }
     section#hero .row {
       height: calc(100%);
       z-index: 2;
@@ -54,25 +57,34 @@ section {
       top: 20%;
       right: -100px;
       margin: 0;
-      background-image: url("/about/images/iphone_2x.png");
+      background-image: url("/about/images/iphone_large.png");
       background-size: 588px 541px;
       width: 588px;
       height: 541px; }
+      @media screen and (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+        section#hero figure.iphone {
+          background-image: url("/about/images/iphone_large_2x.png"); } }
   section#languages {
-    background-image: url("/about/images/languages_background.jpg");
+    background-image: url("/about/images/languages_background_large.jpg");
     background-size: cover;
     background-position: center;
     width: 100%;
     color: #FFF;
     overflow-x: hidden; }
+    @media screen and (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+      section#languages {
+        background-image: url("/about/images/languages_background_large_2x.jpg"); } }
     section#languages figure {
       width: 299px;
       height: 451px;
-      background-image: url("/about/images/languages_logo_2x.png");
+      background-image: url("/about/images/languages_logo_large.png");
       background-size: 299px 451px;
       position: absolute;
       top: 120px;
       left: -70px; }
+      @media screen and (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+        section#languages figure {
+          background-image: url("/about/images/languages_logo_large_2x.png"); } }
     section#languages h2 {
       color: #342b2b;
       font-size: 2.3rem;
@@ -93,17 +105,23 @@ section {
       height: 100%;
       top: 0;
       position: absolute;
-      background-image: url("/about/images/helloworld_background.png");
+      background-image: url("/about/images/helloworld_background_large.png");
       background-size: cover;
       background-position: center;
       opacity: 1;
       z-index: 0; }
+      @media screen and (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+        section#helloworld:before {
+          background-image: url("/about/images/helloworld_background_large_2x.png"); } }
     section#helloworld figure.logo {
-      background-image: url("/about/images/helloworld_logo.png");
+      background-image: url("/about/images/helloworld_logo_large.png");
       background-size: 241px 241px;
       height: 241px;
       width: 241px;
       float: right; }
+      @media screen and (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+        section#helloworld figure.logo {
+          background-image: url("/about/images/helloworld_logo_large_2x.png"); } }
     section#helloworld h2 {
       color: #fff;
       font-size: 2.3rem;
@@ -119,11 +137,15 @@ section {
     position: relative;
     padding: 50px 0; }
     section#eightweek .promo {
-      flex: 0 0 434px;
-      max-width: 434px;
+      flex: 0 0 424px;
+      max-width: 424px;
       margin-right: 50px; }
+      @media print, screen and (min-width: 64em) {
+        section#eightweek .promo {
+          flex: 0 0 434px;
+          max-width: 434px; } }
       section#eightweek .promo .box {
-        background-image: url("/about/images/8w_promo_background.png");
+        background-image: url("/about/images/8w_promo_background_large.png");
         background-repeat: none;
         background-position: center;
         background-size: 404px 582px;
@@ -132,6 +154,9 @@ section {
         padding-top: 350px;
         border-radius: 5px;
         box-shadow: 0px 3px 65px 0px rgba(20, 72, 96, 0.09), 0px 3px 40px 0px rgba(20, 72, 96, 0.07), 0px 14px 40px 0px rgba(20, 72, 96, 0.07); }
+        @media screen and (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+          section#eightweek .promo .box {
+            background-image: url("/about/images/8w_promo_background_large_2x.png"); } }
       section#eightweek .promo h4 {
         color: #fff; }
       section#eightweek .promo p {
@@ -148,55 +173,17 @@ section {
       color: #ec4e48; }
     section#eightweek p {
       color: #342b2b; }
-  section#cards {
-    z-index: 3;
-    position: relative;
-    margin-top: -90px;
-    height: auto;
-    min-height: auto; }
-    section#cards .row {
-      min-height: auto; }
-    section#cards .callout {
-      position: relative;
-      padding-left: 7rem; }
-      @media print, screen and (min-width: 40em) {
-        section#cards .callout {
-          padding-left: 6rem; } }
-      section#cards .callout h4 {
-        font-size: 20px; }
-      section#cards .callout p {
-        color: #cdcdcd;
-        transition: color 0.2s; }
-      section#cards .callout:before {
-        content: " ";
-        display: block;
-        position: absolute;
-        left: 0; }
-      section#cards .callout.github h4 {
-        color: #f34f29; }
-      section#cards .callout.github:before {
-        background-image: url("/home/images/gitrepo_2x.png");
-        background-size: 76px 91px;
-        width: 76px;
-        height: 91px; }
-      section#cards .callout.ninja h4 {
-        color: #774be3; }
-      section#cards .callout.ninja:hover p {
-        color: #d5c8f2; }
-      section#cards .callout.ninja:before {
-        background-image: url("/home/images/devninja_2x.png");
-        background-size: 89px 115px;
-        width: 89px;
-        height: 115px;
-        top: 20px; }
   section#router {
     min-height: auto;
     height: 250px;
-    background-image: url("/about/images/projects_router.jpg");
+    background-image: url("/about/images/projects_router_large.jpg");
     background-size: cover;
     background-position: center;
     overflow: hidden;
     position: relative; }
+    @media screen and (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+      section#router {
+        background-image: url("/about/images/projects_router_large_2x.jpg"); } }
     section#router a:hover figure {
       -moz-transform: translate(25px, -25px);
       -webkit-transform: translate(25px, -25px);
@@ -207,7 +194,7 @@ section {
       min-height: auto;
       padding: 45px 0; }
     section#router figure {
-      background-image: url("/about/images/router_iphones.png");
+      background-image: url("/about/images/router_iphones_large.png");
       background-size: 679px 476px;
       height: 476px;
       width: 679px;
@@ -215,6 +202,9 @@ section {
       top: 0;
       right: 0;
       transition: transform .3s; }
+      @media screen and (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+        section#router figure {
+          background-image: url("/about/images/router_iphones_large_2x.png"); } }
     section#router h2 {
       font-size: 2.3rem;
       font-weight: 500;

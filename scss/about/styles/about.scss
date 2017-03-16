@@ -10,14 +10,17 @@ section {
 
     &#hero {
         $content-height: 85vh;
-        background-image: url("/about/images/hero_background.jpg");
+        background-image: url("/about/images/hero_background_large.jpg");
         background-size: cover;
         background-position: center;
-
         width: 100%;
         height: $content-height;
         color: #FFF;
         overflow-x: hidden;
+
+		@include breakpoint(retina) {
+			background-image: url("/about/images/hero_background_large_2x.jpg");
+		}
 
         .row {
             height: calc(100%);
@@ -49,29 +52,38 @@ section {
             top: 20%;
             right: -100px;
             margin: 0;
-            background-image: url('/about/images/iphone_2x.png');
+            background-image: url('/about/images/iphone_large.png');
             background-size: 588px 541px;
             width: 588px;
             height: 541px;
+			@include breakpoint(retina) {
+				background-image: url('/about/images/iphone_large_2x.png');
+			}
         }
     }
 
     &#languages {
-        background-image: url("/about/images/languages_background.jpg");
+        background-image: url("/about/images/languages_background_large.jpg");
         background-size: cover;
         background-position: center;
         width: 100%;
         color: #FFF;
         overflow-x: hidden;
+		@include breakpoint(retina) {
+			background-image: url("/about/images/languages_background_large_2x.jpg");
+		}
 
         figure {
             width: 299px;
             height: 451px;
-            background-image: url('/about/images/languages_logo_2x.png');
+            background-image: url('/about/images/languages_logo_large.png');
             background-size: 299px 451px;
             position: absolute;
             top: 120px;
             left: -70px;
+			@include breakpoint(retina) {
+				background-image: url('/about/images/languages_logo_large_2x.png');
+			}
         }
 
         h2 {
@@ -99,19 +111,25 @@ section {
             height: 100%;
             top: 0;
             position: absolute;
-            background-image: url("/about/images/helloworld_background.png");
+            background-image: url("/about/images/helloworld_background_large.png");
             background-size: cover;
             background-position: center;
             opacity: 1;
             z-index: 0;
+			@include breakpoint(retina) {
+				background-image: url("/about/images/helloworld_background_large_2x.png");
+			}
         }
 
         figure.logo {
-            background-image: url('/about/images/helloworld_logo.png');
+            background-image: url('/about/images/helloworld_logo_large.png');
             background-size: 241px 241px;
             height: 241px;
             width: 241px;
             float: right;
+			@include breakpoint(retina) {
+				background-image: url('/about/images/helloworld_logo_large_2x.png');
+			}
         }
 
         h2 {
@@ -135,22 +153,30 @@ section {
         padding: 50px 0;
 
         .promo {
-            flex: 0 0 434px;
-            max-width: 434px;
+            flex: 0 0 424px;
+            max-width: 424px;
             margin-right: 50px;
 
+
+			@include breakpoint(large) {
+	            flex: 0 0 434px;
+	            max-width: 434px;
+			}
+
             .box{
-                background-image: url('/about/images/8w_promo_background.png');
+                background-image: url('/about/images/8w_promo_background_large.png');
                 background-repeat: none;
                 background-position: center;
                 background-size: 404px 582px;
                 height: 582px;
                 padding: 0 40px;
-
                 padding-top: 350px;
-
                 border-radius: 5px;
                 box-shadow: 0px 3px 65px 0px rgba(20, 72, 96, 0.09), 0px 3px 40px 0px rgba(20, 72, 96, 0.07), 0px 14px 40px 0px rgba(20, 72, 96, 0.07);
+
+				@include breakpoint(retina) {
+					background-image: url('/about/images/8w_promo_background_large_2x.png');
+				}
             }
 
             h4 {
@@ -180,92 +206,17 @@ section {
         }
     }
 
-    &#cards {
-        z-index: 3;
-        position: relative;
-        margin-top: -90px;
-        height: auto;
-        min-height: auto;
-
-        .row {
-            min-height: auto;
-        }
-
-        .columns {
-            &:first-child {
-                @include breakpoint(medium) {
-                    // padding-right: 0;
-                }
-            }
-        }
-
-        .callout {
-            position: relative;
-            padding-left: 7rem;
-
-            @include breakpoint(medium) {
-                padding-left: 6rem;
-            }
-
-            h4 {
-                font-size: 20px;
-            }
-
-            p {
-                color: #cdcdcd;
-                transition: color 0.2s;
-            }
-
-            &:before {
-                content: " ";
-                display: block;
-                position: absolute;
-                left: 0;
-            }
-
-            &.github {
-
-                h4 {
-                    color: #f34f29;
-                }
-
-                &:before {
-                    background-image: url('/home/images/gitrepo_2x.png');
-                    background-size: 76px 91px;
-                    width: 76px;
-                    height: 91px;
-                }
-            }
-
-            &.ninja {
-                h4 {
-                    color: #774be3;
-                }
-
-                &:hover p {
-                    color: #d5c8f2;
-                }
-
-                &:before {
-                    background-image: url('/home/images/devninja_2x.png');
-                    background-size: 89px 115px;
-                    width: 89px;
-                    height: 115px;
-                    top: 20px;
-                }
-            }
-
-        }
-    }
-
     &#router {
         min-height: auto;
         height: 250px;
-        background-image: url('/about/images/projects_router.jpg');
+        background-image: url('/about/images/projects_router_large.jpg');
         background-size: cover;
         background-position: center;
         overflow: hidden;
         position: relative;
+		@include breakpoint(retina) {
+			background-image: url('/about/images/projects_router_large_2x.jpg');
+		}
 
         a:hover {
             figure {
@@ -284,7 +235,7 @@ section {
         }
 
         figure {
-            background-image: url('/about/images/router_iphones.png');
+            background-image: url('/about/images/router_iphones_large.png');
             background-size: 679px 476px;
             height: 476px;
             width: 679px;
@@ -292,6 +243,10 @@ section {
             top: 0;
             right: 0;
             transition: transform .3s;
+
+			@include breakpoint(retina) {
+				background-image: url('/about/images/router_iphones_large_2x.png');
+			}
         }
 
         h2 {
