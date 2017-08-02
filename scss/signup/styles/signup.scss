@@ -1,0 +1,74 @@
+@import "../../../bower_components/sudo-web-framework/scss/sudoweb";
+
+.fade-enter-active, .fade-leave-active {
+	transition: opacity .5s, transform .5s;
+}
+.fade-enter, .fade-leave-to {
+	opacity: 0;
+	transform: translateY(-200px);
+}
+.fade-leave-to {
+}
+
+section {
+    &#hero {
+        @include sw-gradient("sudobg");
+        $content-height: 90vh;
+
+        width: 100%;
+        height: $content-height;
+        color: #FFF;
+
+        &:after {
+            display: block;
+            content: "";
+            width: 100%;
+            height: $content-height;
+            top: 0;
+            position: absolute;
+            background-image: url("/home/images/home-background.jpg");
+            background-size: cover;
+            background-position: center;
+            opacity: 1;
+            z-index: 1;
+        }
+
+        .row {
+            height: calc(100%);
+            z-index: 2;
+            position: relative;
+
+            h1 {
+                line-height: 25px;
+
+                b {
+                    font-weight: 600;
+                }
+                @include breakpoint(medium) {
+                    line-height: 50px;
+                }
+            }
+
+            h3 {
+                color: #d1e2ed;
+                font-size: 20px;
+            }
+        }
+
+		.form {
+			background-color: white;
+			padding: 40px;
+			border-radius: 6px;
+			text-align: left;
+
+			label {
+				color: $primary-color;
+
+			}
+		}
+
+    }
+
+
+
+}

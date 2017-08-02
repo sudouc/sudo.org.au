@@ -1,0 +1,115 @@
+<!doctype html>
+<html class="no-js" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-AU" lang="en-AU" prefix="og: http://ogp.me/ns#">
+
+<head>
+	<!--#include virtual="/sudo-global/includes/global-ie9.inc" -->
+
+	<title>Signup – Sudo – UC’s premiere Kickstarting and Coding Society</title>
+
+	<meta name="Description" content="Sudo is the University of Canberra's Developer's Society." />
+
+	<meta property="og:title" content="Signup – Sudo – UC's Developers Organisation" />
+	<meta property="og:description" content="Sudo is the University of Canberra's Developer's Society." />
+	<meta property="og:url" content="https://sudo.org.au/" />
+	<meta property="og:image" content="https://sudo.org.au/sudo-global/images/og_image.png" />
+	<!--#include virtual="/sudo-global/includes/global-meta.inc" -->
+
+	<!--#include virtual="/sudo-global/includes/global-styles.inc" -->
+	<link rel="stylesheet" href="/signup/styles/signup.css" />
+</head>
+
+<body>
+	<!--#include virtual="/sudo-global/includes/header.inc" -->
+
+	<section id="hero">
+
+			<div class="row align-middle">
+				<div class="small-12 small-centered columns text-center relative">
+					<transition name="fade">
+						<div class="" v-if="stage == 1">
+							<h3>Sign Up</h3>
+							<div class="row align-center">
+
+
+								<div class="form small-6 columns" role="form" method="POST" action="https://api.sudo.org.au/register">
+									<input type="hidden" name="_token" value="0ivzAJQZyfJDHiIyH1nlj4XTazHvtWxuSyMrfbZo">
+
+									<div class="form-group">
+										<label for="name" class="small-12 columns control-label">Name</label>
+
+										<div class="small-12 columns">
+											<input v-model="name" id="name" type="text" class="form-control" name="name" value="" required="" autofocus="">
+
+																</div>
+									</div>
+
+									<div class="form-group">
+										<label for="email" class="small-12 columns control-label">E-Mail Address</label>
+
+										<div class="small-12 columns">
+											<input v-model="email" id="email" type="email" class="form-control" name="email" value="" required="">
+
+																</div>
+									</div>
+
+									<div class="form-group">
+										<label for="email" class="small-12 columns control-label">Student ID</label>
+
+										<div class="small-12 columns">
+											<input v-model="studentid" id="studentid" type="text" class="form-control" name="studentid" value="" required="">
+
+																</div>
+									</div>
+
+									<div class="form-group">
+										<label for="password" class="small-12 columns control-label">Password</label>
+
+										<div class="small-12 columns">
+											<input v-model="password" id="password" type="password" class="form-control" name="password" required="">
+
+																</div>
+									</div>
+
+									<div class="form-group">
+										<label for="password-confirm" class="small-12 columns control-label">Confirm Password</label>
+
+										<div class="small-12 columns">
+											<input v-model="passwordconfirm" id="password-confirm" type="password" class="form-control" name="password_confirmation" required="">
+										</div>
+									</div>
+
+									<div class="form-group">
+										<div class="small-12 columns small-o columnsffset-4">
+											<button @click="nextStage(2)" class="button primary">
+												Register
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</transition>
+
+					<transition name="fade">
+						<div class="" v-if="stage == 2">
+							<h3>Sign Up</h3>
+							<h2>What type of membership are you looking for?</h2>
+					        <button class="button white" id="semesterButton">Just semester 2</button>
+					        <button class="button secondary" id="yearButton">Full Year</button>
+						</div>
+					</transition>
+				</div>
+			</div>
+
+	</section>
+
+	<!--#include virtual="/sudo-global/includes/footer.inc" -->
+	<!--#include virtual="/sudo-global/includes/global-scripts.inc" -->
+	<script src="https://checkout.stripe.com/checkout.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.4.2/vue.js" charset="utf-8"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/vue-resource/1.3.4/vue-resource.min.js" charset="utf-8"></script>
+	<script src="/signup/scripts/signup.js" charset="utf-8"></script>
+
+</body>
+
+</html>
