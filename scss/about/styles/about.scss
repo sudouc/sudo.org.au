@@ -1,6 +1,7 @@
 @import "../../../bower_components/sudo-web-framework/scss/sudoweb";
 
 section {
+	padding: 100px 0;
     min-height: 700px;
 
     .row {
@@ -16,14 +17,15 @@ section {
         width: 100%;
         height: $content-height;
         color: #FFF;
-        overflow-x: hidden;
+        overflow: hidden;
+		padding-top: 100px;
 
 		@include breakpoint(retina) {
 			background-image: url("/about/images/hero_background_large_2x.jpg");
 		}
 
         .row {
-            height: calc(100%);
+            // height: calc(100%);
             z-index: 2;
             position: relative;
 
@@ -48,16 +50,27 @@ section {
         }
 
         figure.iphone {
-            position: absolute;
-            top: 20%;
-            right: -100px;
-            margin: 0;
+			margin: 0 auto;
+			transform: translateX(-20%);
+            margin-bottom: -200px;
+
             background-image: url('/about/images/iphone_large.png');
             background-size: 588px 541px;
             width: 588px;
             height: 541px;
 			@include breakpoint(retina) {
 				background-image: url('/about/images/iphone_large_2x.png');
+			}
+
+			@include breakpoint(medium) {
+				transform: translateX(0%);
+				position: absolute;
+	            top: 20%;
+	            right: -100px;
+	            margin: 0;
+
+	            width: 588px;
+	            height: 541px;
 			}
         }
     }
@@ -76,13 +89,23 @@ section {
         figure {
             width: 299px;
             height: 451px;
+			margin: 0 auto;
+			margin-bottom: 40px;
             background-image: url('/about/images/languages_logo_large.png');
             background-size: 299px 451px;
-            position: absolute;
-            top: 120px;
-            left: -70px;
+
 			@include breakpoint(retina) {
 				background-image: url('/about/images/languages_logo_large_2x.png');
+			}
+
+			@include breakpoint(medium) {
+	            width: 299px;
+	            height: 451px;
+	            background-image: url('/about/images/languages_logo_large.png');
+	            background-size: 299px 451px;
+	            position: absolute;
+	            top: 120px;
+	            left: -70px;
 			}
         }
 
@@ -207,6 +230,7 @@ section {
     }
 
     &#router {
+		padding: 0;
         min-height: auto;
         height: 250px;
         background-image: url('/about/images/projects_router_large.jpg');
