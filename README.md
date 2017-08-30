@@ -26,7 +26,7 @@ The Sudo Website is built on top of [Foundation by Zurb](foundation.zurb.com/sit
 
 When modifying any HTML, feel free to modify anything within it, preview the page in browser (Eg. http://localhost:3000/about/) and then commit it.
 
-For SCSS and JS files, it get's a little bit more complex. **Do not modify any *-min.js or *.css files, as they will be quickly overwritten**. Only modify *.js and *.scss files to edit the Javascript and Stylesheets respectively.
+For SCSS and JS files, it get's a little bit more complex. **Do not modify any `*-min.js` or `*.css` files, as they will be quickly overwritten**. Only modify *.js and *.scss files to edit the Javascript and Stylesheets respectively.
 
 
 ### SCSS
