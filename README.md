@@ -51,11 +51,11 @@ Each SCSS and JS file, compiles down to it's own CSS and 'Minified JS' file resp
 
 **SCSS to CSS looks like this:**
 
-/scss/{PAGENAME}/styles/{PAGENAME}.scss > /{PAGENAME}/styles/{PAGENAME}.css
+`/scss/{PAGENAME}/styles/{PAGENAME}.scss > /{PAGENAME}/styles/{PAGENAME}.css`
 
 **JS to 'Minified JS' looks like this:**
 
-/{PAGENAME}/scripts/{PAGENAME}.js > /{PAGENAME}/scripts/{PAGENAME}-min.js
+`/{PAGENAME}/scripts/{PAGENAME}.js > /{PAGENAME}/scripts/{PAGENAME}-min.js`
 
 
 ### Note:
