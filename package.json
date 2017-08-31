@@ -1,7 +1,7 @@
 {
-  "name": "aaf-website",
+  "name": "sudo-website",
   "version": "1.0.0",
-  "description": "Website Source for http://australianarmedforces.org.",
+  "description": "Website Source for http://sudo.org.au",
   "main": "gulpfile.js",
   "devDependencies": {
     "browser-sync": "^2.18.12",

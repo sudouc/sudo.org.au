@@ -49,7 +49,7 @@ mix.webpackConfig({
 	[ 'about', 'about' ],
 ]
 
-var fip = { includePaths: ['node_modules/foundation-sites/scss/', 'scss/aaf-global/styles/']};
+var fip = { includePaths: ['node_modules/foundation-sites/scss/', 'scss/sudo-global/styles/']};
 
  for(index in styles) {
 	 var folder = styles[index][0]
