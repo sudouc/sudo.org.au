@@ -41,7 +41,7 @@ mix.webpackConfig({
 
 
 /**
- * AAF Styles
+ * Sudo Styles
  */
 
  /* Folder, Name */
@@ -59,7 +59,7 @@ var fip = { includePaths: ['node_modules/foundation-sites/scss/', 'scss/aaf-glob
 
 
 /**
- * AAF Script
+ * Sudo Script
  */
 
 
