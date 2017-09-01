@@ -13,11 +13,16 @@ section {
         background-image: url("/projects/images/hero_background.jpg");
         background-size: cover;
         background-position: center;
-
+		padding-top: 100px;
         width: 100%;
-        height: $content-height;
+
         color: #FFF;
         overflow: hidden;
+
+		@include breakpoint(medium) {
+			padding-top: 0;
+			height: $content-height;
+		}
 
         .row {
             height: calc(100%);
@@ -49,14 +54,24 @@ section {
         }
 
         figure.macbook {
-            position: absolute;
-            top: 20%;
-            right: -411px;
-            margin: 0;
+
             background-image: url('/projects/images/hero_macbook.png');
             background-size: 947px 823px;
             width: 947px;
             height: 823px;
+			display: none;
+			position: absolute;
+			top: 20%;
+            right: -500px;
+            margin: 0;
+
+			@include breakpoint(medium) {
+				display: block;
+			}
+
+			@include breakpoint(large) {
+				right: -411px;
+			}
         }
     }
 

@@ -149,7 +149,13 @@ section {
             background-size: 241px 241px;
             height: 241px;
             width: 241px;
-            float: right;
+			margin: 80px auto 0;
+
+			@include breakpoint(medium) {
+				float: right;
+				margin: 0
+			}
+
 			@include breakpoint(retina) {
 				background-image: url('/about/images/helloworld_logo_large_2x.png');
 			}
@@ -176,9 +182,17 @@ section {
         padding: 50px 0;
 
         .promo {
-            flex: 0 0 424px;
-            max-width: 424px;
-            margin-right: 50px;
+			max-width: 424px;
+			margin: 0 auto;
+			margin-bottom: 80px;
+
+			@include breakpoint(medium) {
+				width: auto;
+				margin-right: 50px;
+	            flex: 0 0 424px;
+				margin-bottom: 0;
+
+			}
 
 
 			@include breakpoint(large) {
@@ -238,6 +252,7 @@ section {
         background-position: center;
         overflow: hidden;
         position: relative;
+
 		@include breakpoint(retina) {
 			background-image: url('/about/images/projects_router_large_2x.jpg');
 		}
@@ -266,7 +281,12 @@ section {
             position: absolute;
             top: 0;
             right: 0;
+			left: 150px;
             transition: transform .3s;
+
+			@include breakpoint(medium) {
+				left: 0;
+			}
 
 			@include breakpoint(retina) {
 				background-image: url('/about/images/router_iphones_large_2x.png');

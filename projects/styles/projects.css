@@ -4,100 +4,172 @@
  * sudo.org.au
  * Licensed under MIT Open Source
  */
+
 /*
  * Height mesured in 1 to 5.
  * Adds Box-Shadow to elements
  */
+
 /*
  * Height mesured in 1 to 5.
  * Adds Box-Shadow to elements
  */
+
 /* Gradients */
+
 /*
  * Height mesured in 1 to 5.
  * Adds Box-Shadow to elements
  */
+
 /*
  * Height mesured in 1 to 5.
  * Adds Box-Shadow to elements
  */
+
 section {
-  min-height: 700px; }
-  section .row {
-    min-height: 700px;
-    position: relative; }
+  min-height: 700px;
+}
+
+section .row {
+  min-height: 700px;
+  position: relative;
+}
+
+section#hero {
+  background-image: url("/projects/images/hero_background.jpg");
+  background-size: cover;
+  background-position: center;
+  padding-top: 100px;
+  width: 100%;
+  color: #FFF;
+  overflow: hidden;
+}
+
+@media print, screen and (min-width: 40em) {
   section#hero {
-    background-image: url("/projects/images/hero_background.jpg");
-    background-size: cover;
-    background-position: center;
-    width: 100%;
+    padding-top: 0;
     height: 85vh;
-    color: #FFF;
-    overflow: hidden; }
-    section#hero .row {
-      height: calc(100%);
-      z-index: 2;
-      position: relative; }
-      section#hero .row h1 {
-        margin-bottom: 0px;
-        line-height: 40px; }
-        section#hero .row h1 b {
-          font-weight: 500; }
-      section#hero .row h3 {
-        color: #76e163;
-        font-size: 26px;
-        margin-bottom: 20px; }
-      section#hero .row p {
-        color: #a9ed9d; }
-      section#hero .row a.button.more {
-        color: #4eb953; }
-    section#hero figure.macbook {
-      position: absolute;
-      top: 20%;
-      right: -411px;
-      margin: 0;
-      background-image: url("/projects/images/hero_macbook.png");
-      background-size: 947px 823px;
-      width: 947px;
-      height: 823px; }
-  section#cards {
-    z-index: 3;
-    position: relative;
-    margin-top: -90px;
-    height: auto;
-    min-height: auto; }
-    section#cards .row {
-      min-height: auto; }
-    section#cards .callout {
-      position: relative;
-      padding-left: 7rem; }
-      @media print, screen and (min-width: 40em) {
-        section#cards .callout {
-          padding-left: 6rem; } }
-      section#cards .callout h4 {
-        font-size: 20px; }
-      section#cards .callout p {
-        color: #cdcdcd;
-        transition: color 0.2s; }
-      section#cards .callout:before {
-        content: " ";
-        display: block;
-        position: absolute;
-        left: 0; }
-      section#cards .callout.github h4 {
-        color: #f34f29; }
-      section#cards .callout.github:before {
-        background-image: url("/home/images/gitrepo_2x.png");
-        background-size: 76px 91px;
-        width: 76px;
-        height: 91px; }
-      section#cards .callout.ninja h4 {
-        color: #774be3; }
-      section#cards .callout.ninja:hover p {
-        color: #d5c8f2; }
-      section#cards .callout.ninja:before {
-        background-image: url("/home/images/devninja_2x.png");
-        background-size: 89px 115px;
-        width: 89px;
-        height: 115px;
-        top: 20px; }
+  }
+}
+
+section#hero .row {
+  height: calc(100%);
+  z-index: 2;
+  position: relative;
+}
+
+section#hero .row h1 {
+  margin-bottom: 0px;
+  line-height: 40px;
+}
+
+section#hero .row h1 b {
+  font-weight: 500;
+}
+
+section#hero .row h3 {
+  color: #76e163;
+  font-size: 26px;
+  margin-bottom: 20px;
+}
+
+section#hero .row p {
+  color: #a9ed9d;
+}
+
+section#hero .row a.button.more {
+  color: #4eb953;
+}
+
+section#hero figure.macbook {
+  background-image: url("/projects/images/hero_macbook.png");
+  background-size: 947px 823px;
+  width: 947px;
+  height: 823px;
+  display: none;
+  position: absolute;
+  top: 20%;
+  right: -500px;
+  margin: 0;
+}
+
+@media print, screen and (min-width: 40em) {
+  section#hero figure.macbook {
+    display: block;
+  }
+}
+
+@media print, screen and (min-width: 64em) {
+  section#hero figure.macbook {
+    right: -411px;
+  }
+}
+
+section#cards {
+  z-index: 3;
+  position: relative;
+  margin-top: -90px;
+  height: auto;
+  min-height: auto;
+}
+
+section#cards .row {
+  min-height: auto;
+}
+
+section#cards .callout {
+  position: relative;
+  padding-left: 7rem;
+}
+
+@media print, screen and (min-width: 40em) {
+  section#cards .callout {
+    padding-left: 6rem;
+  }
+}
+
+section#cards .callout h4 {
+  font-size: 20px;
+}
+
+section#cards .callout p {
+  color: #cdcdcd;
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s;
+}
+
+section#cards .callout:before {
+  content: " ";
+  display: block;
+  position: absolute;
+  left: 0;
+}
+
+section#cards .callout.github h4 {
+  color: #f34f29;
+}
+
+section#cards .callout.github:before {
+  background-image: url("/home/images/gitrepo_2x.png");
+  background-size: 76px 91px;
+  width: 76px;
+  height: 91px;
+}
+
+section#cards .callout.ninja h4 {
+  color: #774be3;
+}
+
+section#cards .callout.ninja:hover p {
+  color: #d5c8f2;
+}
+
+section#cards .callout.ninja:before {
+  background-image: url("/home/images/devninja_2x.png");
+  background-size: 89px 115px;
+  width: 89px;
+  height: 115px;
+  top: 20px;
+}
+

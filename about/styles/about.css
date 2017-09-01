@@ -196,7 +196,14 @@ section#helloworld figure.logo {
   background-size: 241px 241px;
   height: 241px;
   width: 241px;
-  float: right;
+  margin: 80px auto 0;
+}
+
+@media print, screen and (min-width: 40em) {
+  section#helloworld figure.logo {
+    float: right;
+    margin: 0;
+  }
 }
 
 @media screen and (-webkit-min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
@@ -228,11 +235,20 @@ section#eightweek {
 }
 
 section#eightweek .promo {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 424px;
-          flex: 0 0 424px;
   max-width: 424px;
-  margin-right: 50px;
+  margin: 0 auto;
+  margin-bottom: 80px;
+}
+
+@media print, screen and (min-width: 40em) {
+  section#eightweek .promo {
+    width: auto;
+    margin-right: 50px;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 424px;
+            flex: 0 0 424px;
+    margin-bottom: 0;
+  }
 }
 
 @media print, screen and (min-width: 64em) {
@@ -326,10 +342,17 @@ section#router figure {
   position: absolute;
   top: 0;
   right: 0;
+  left: 150px;
   -webkit-transition: -webkit-transform .3s;
   transition: -webkit-transform .3s;
   transition: transform .3s;
   transition: transform .3s, -webkit-transform .3s;
+}
+
+@media print, screen and (min-width: 40em) {
+  section#router figure {
+    left: 0;
+  }
 }
 
 @media screen and (-webkit-min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
