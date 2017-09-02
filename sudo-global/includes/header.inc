@@ -25,7 +25,7 @@
 		</div>
 		<div class="column text-right">
 			<div class="mobile-menu hide-for-medium"></div>
-			<a href="https://api.sudo.org.au/" class="signin show-for-medium">Sign In <i class="fa fa-chevron-right" aria-hidden="true"></i></i></a>
+			<a href="https://api.sudo.org.au/" class="signin show-for-medium">Sign In <i class="fa fa-chevron-right" aria-hidden="true"></i></a>
 		</div>
 	</div>
 </header>
