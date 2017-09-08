@@ -42,7 +42,7 @@ section#hero {
   background-size: cover;
   background-position: center;
   width: 100%;
-  height: 85vh;
+  min-height: 75vh;
   color: #FFF;
   overflow: hidden;
   padding-top: 100px;
@@ -351,7 +351,7 @@ section#router figure {
 
 @media print, screen and (min-width: 40em) {
   section#router figure {
-    left: 0;
+    left: auto;
   }
 }
 

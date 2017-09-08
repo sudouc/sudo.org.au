@@ -1,4 +1,4 @@
-@import "../../../bower_components/sudo-web-framework/scss/sudoweb";
+@import "~sudo-web-framework/scss/sudoweb";
 
 section {
 	padding: 100px 0;
@@ -10,12 +10,12 @@ section {
     }
 
     &#hero {
-        $content-height: 85vh;
+        $content-height: 75vh;
         background-image: url("/about/images/hero_background_large.jpg");
         background-size: cover;
         background-position: center;
         width: 100%;
-        height: $content-height;
+        min-height: $content-height;
         color: #FFF;
         overflow: hidden;
 		padding-top: 100px;
@@ -285,7 +285,7 @@ section {
             transition: transform .3s;
 
 			@include breakpoint(medium) {
-				left: 0;
+				left: auto;
 			}
 
 			@include breakpoint(retina) {
@@ -304,4 +304,5 @@ section {
             color: #fff;
         }
     }
+
 }

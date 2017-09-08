@@ -1,3 +1,7 @@
 {
-    "/about/styles/about.css": "/about/styles/about.css"
+    "/sudo-global/scripts/min/sudo-global.min.js": "/sudo-global/scripts/min/sudo-global.min.js",
+    "/about/styles/about.css": "/about/styles/about.css",
+    "/home/styles/home.css": "/home/styles/home.css",
+    "/projects/styles/projects.css": "/projects/styles/projects.css",
+    "/sudo-global/styles/sudo-global.css": "/sudo-global/styles/sudo-global.css"
 }

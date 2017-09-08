@@ -4,99 +4,141 @@
  * sudo.org.au
  * Licensed under MIT Open Source
  */
+
 /*
  * Height mesured in 1 to 5.
  * Adds Box-Shadow to elements
  */
+
 /*
  * Height mesured in 1 to 5.
  * Adds Box-Shadow to elements
  */
+
 /* Gradients */
+
 /*
  * Height mesured in 1 to 5.
  * Adds Box-Shadow to elements
  */
+
 /*
  * Height mesured in 1 to 5.
  * Adds Box-Shadow to elements
  */
+
 section#hero {
   background: #911aff;
   /* Old browsers */
-  background-image: -moz-linear-gradient(11deg, #911aff 0%, #3dc1ff 100%);
-  background-image: -webkit-linear-gradient(11deg, #911aff 0%, #3dc1ff 100%);
   background-image: -ms-linear-gradient(11deg, #911aff 0%, #3dc1ff 100%);
   width: 100%;
   height: 85vh;
-  color: #FFF; }
-  section#hero:hover {
-    background: #aa1aff;
-    /* Old browsers */
-    background-image: -moz-linear-gradient(11deg, #aa1aff 0%, #69c1ff 100%);
-    background-image: -webkit-linear-gradient(11deg, #aa1aff 0%, #69c1ff 100%);
-    background-image: -ms-linear-gradient(11deg, #aa1aff 0%, #69c1ff 100%); }
-  section#hero:after {
-    display: block;
-    content: "";
-    width: 100%;
-    height: 85vh;
-    top: 0;
-    position: absolute;
-    background-image: url("/home/images/home-background.jpg");
-    background-size: cover;
-    background-position: center;
-    opacity: 1;
-    z-index: 1; }
-  section#hero .row {
-    height: calc(100%);
-    z-index: 2;
-    position: relative; }
-    section#hero .row h1 {
-      line-height: 25px; }
-      section#hero .row h1 b {
-        font-weight: 600; }
-      @media print, screen and (min-width: 40em) {
-        section#hero .row h1 {
-          line-height: 50px; } }
-    section#hero .row h3 {
-      color: #d1e2ed;
-      font-size: 20px; }
+  color: #FFF;
+}
+
+section#hero:hover {
+  background: #aa1aff;
+  /* Old browsers */
+  background-image: -ms-linear-gradient(11deg, #aa1aff 0%, #69c1ff 100%);
+}
+
+section#hero:after {
+  display: block;
+  content: "";
+  width: 100%;
+  height: 85vh;
+  top: 0;
+  position: absolute;
+  background-image: url("/home/images/home-background.jpg");
+  background-size: cover;
+  background-position: center;
+  opacity: 1;
+  z-index: 1;
+}
+
+section#hero .row {
+  height: calc(100%);
+  z-index: 2;
+  position: relative;
+}
+
+section#hero .row h1 {
+  line-height: 25px;
+}
+
+section#hero .row h1 b {
+  font-weight: 600;
+}
+
+@media print, screen and (min-width: 40em) {
+  section#hero .row h1 {
+    line-height: 50px;
+  }
+}
+
+section#hero .row h3 {
+  color: #d1e2ed;
+  font-size: 20px;
+}
 
 section#cards {
   z-index: 3;
   position: relative;
-  margin-top: -90px; }
+  margin-top: -90px;
+}
+
+section#cards .callout {
+  position: relative;
+  padding-left: 7rem;
+}
+
+@media print, screen and (min-width: 40em) {
   section#cards .callout {
-    position: relative;
-    padding-left: 7rem; }
-    @media print, screen and (min-width: 40em) {
-      section#cards .callout {
-        padding-left: 6rem; } }
-    section#cards .callout h4 {
-      font-size: 20px; }
-    section#cards .callout p {
-      color: #cdcdcd;
-      transition: color 0.2s; }
-    section#cards .callout:before {
-      content: " ";
-      display: block;
-      position: absolute;
-      left: 0; }
-    section#cards .callout.github h4 {
-      color: #f34f29; }
-    section#cards .callout.github:before {
-      background-image: url("/home/images/gitrepo_2x.png");
-      background-size: 76px 91px;
-      width: 76px;
-      height: 91px; }
-    section#cards .callout.ninja h4 {
-      color: #774be3; }
-    section#cards .callout.ninja:hover p {
-      color: #d5c8f2; }
-    section#cards .callout.ninja:before {
-      background-image: url("/home/images/devninja_2x.png");
-      background-size: 89px 115px;
-      width: 89px;
-      height: 115px;
-      top: 20px; }
+    padding-left: 6rem;
+  }
+}
+
+section#cards .callout h4 {
+  font-size: 20px;
+}
+
+section#cards .callout p {
+  color: #cdcdcd;
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s;
+}
+
+section#cards .callout:before {
+  content: " ";
+  display: block;
+  position: absolute;
+  left: 0;
+}
+
+section#cards .callout.github h4 {
+  color: #f34f29;
+}
+
+section#cards .callout.github:before {
+  background-image: url("/home/images/gitrepo_2x.png");
+  background-size: 76px 91px;
+  width: 76px;
+  height: 91px;
+}
+
+section#cards .callout.ninja h4 {
+  color: #774be3;
+}
+
+section#cards .callout.ninja:hover p {
+  color: #d5c8f2;
+}
+
+section#cards .callout.ninja:before {
+  background-image: url("/home/images/devninja_2x.png");
+  background-size: 89px 115px;
+  width: 89px;
+  height: 115px;
+  top: 20px;
+}
+

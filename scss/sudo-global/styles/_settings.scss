@@ -41,7 +41,7 @@
 //  36. Tooltip
 //  37. Top Bar
 
-@import '../../../bower_components/sudo-web-framework/scss/util/util';
+@import '~sudo-web-framework/scss/util/util';
 
 // 1. Global
 // ---------
@@ -121,7 +121,7 @@ $breakpoint-classes: (small medium large);
 $grid-row-width: $global-width;
 $grid-column-count: 12;
 $grid-column-gutter: (
-  small: 20px,
+  small: 30px,
   medium: 30px,
 );
 $grid-column-align-edge: true;

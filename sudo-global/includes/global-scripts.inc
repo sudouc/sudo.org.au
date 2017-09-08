@@ -10,3 +10,7 @@
 			ga('send', 'pageview');
 
 		</script>
+
+		<script src="/sudo-global/scripts/min/sudo-global.min.js" charset="utf-8"></script>
+
+		

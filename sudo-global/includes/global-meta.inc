@@ -11,3 +11,6 @@
 
 <link rel="home" href="https://sudo.org.au/" />
 <link rel="index" href="https://sudo.org.au/" />
+
+
+<!--#set var="registerURL" value="http://api.sudo.org.au/register" -->
