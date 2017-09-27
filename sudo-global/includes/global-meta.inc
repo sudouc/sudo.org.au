@@ -13,4 +13,4 @@
 <link rel="index" href="https://sudo.org.au/" />
 
 
-<!--#set var="registerURL" value="http://api.sudo.org.au/register" -->
+<!--#set var="registerURL" value="http://platform.sudo.org.au/register" -->
