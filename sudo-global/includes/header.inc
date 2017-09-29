@@ -49,7 +49,7 @@
 				</div>
 			</div>
 
-			<a @click="menu_open = false" href="<!--#echo var="registerURL" -->" class="signin show-for-medium">Sign In <i class="fa fa-chevron-right" aria-hidden="true"></i></i></a>
+			<a @click="menu_open = false" href="<!--#echo var="signInURL" -->" class="signin show-for-medium">Sign In <i class="fa fa-chevron-right" aria-hidden="true"></i></i></a>
 		</div>
 	</div>
 </header>
