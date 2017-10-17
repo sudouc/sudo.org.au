@@ -9645,11 +9645,12 @@ footer .legal {
 }
 
 footer .unican {
+  vertical-align: middle;
+  margin-left: 20px;
   background-image: url("/sudo-global/images/unican_2x.png");
   background-size: 89px 18px;
   width: 89px;
   height: 18px;
-  position: absolute;
-  right: 0;
+  display: inline-block;
 }
 

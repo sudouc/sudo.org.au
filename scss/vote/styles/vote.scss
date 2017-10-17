@@ -3,8 +3,18 @@
 html, body {
 	background-color: #fafafa;
 }
-section {
+header {
+  .logo-for-pitch-night {
+    font-family: "Circular Std", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+    color: #FFF;
+    font-size: 20px;
 
+    b {
+      font-weight: 600;
+    }
+  }
+}
+section {
     .row {
         position: relative;
     }

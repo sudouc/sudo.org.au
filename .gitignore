@@ -7,3 +7,4 @@ config.code*
 custom-hosts
 .tag*
 npm-debug.log
+.idea/

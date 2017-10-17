@@ -1,6 +1,7 @@
 var app = new Vue({
     el: '#voting',
     data: {
+    	apiURL: "https://sudoapistaging.herokuapp.com/",
         candidates: []
     },
     methods: {
