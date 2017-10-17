@@ -1,7 +1,8 @@
 var app = new Vue({
+    name: 'Root2',
     el: '#voting',
     data: {
-    	apiURL: "https://sudoapistaging.herokuapp.com/",
+    	apiURL: "http://am.local:9090/api/pitch/",
         candidates: []
     },
     methods: {
@@ -32,24 +33,11 @@ var app = new Vue({
 		    return indexOf.call(this, needle) > -1;
 		},
 		refresh: function () {
+			var _this = this;
 			setTimeout(function () {
-				app.$http.get('https://sudoapistaging.herokuapp.com/api/pitch/candidates').then(function (response) {
-					var cand = response.body
-					var addTo = [];
-					cand.forEach(function (can) {
-						can.selected = false;
-						can.disabled = false;
-					});
-					cand.forEach(function (can) {
-						if(app.contains(app.candidates, cand)) {
-							console.log("YESSSSS")
-						} else {
-							addTo.push(cand)
-						}
-					})
+				app.$http.get(_this.apiURL + 'candidates').then(function (response) {
+					var candidates = response.body
 
-
-					app.candidates = addTo;
 				}, function (response) {
 					// error callback
 				});
@@ -57,20 +45,31 @@ var app = new Vue({
 				app.refresh();
 			}, 10000)
 		},
+		toggleDisabled: function() {
+            app.candidates.forEach(function (can) {
+                if (can.selected == true) {
+                    numberOfSelected++;
+                }
+            });
+		},
         selectCan: function (can) {
-
+			var _this = this;
             // Change Selected Value on Object
             if (can.selected) {
-				this.$http.get('https://sudoapistaging.herokuapp.com/api/pitch/downvote/' + can.id).then(function (response) {
+            	can.disabled = true;
+				this.$http.get(_this.apiURL + 'downvote/' + can.id).then(function (response) {
 					console.log("Success");
+					can.disabled = false;
 				}, function (response) {
 					// error callback
 				});
                 can.selected = false;
             } else {
                 if (!can.disabled) {
-					this.$http.get('https://sudoapistaging.herokuapp.com/api/pitch/vote/' + can.id).then(function (response) {
+                	can.disabled = true;
+					this.$http.get(_this.apiURL + 'vote/' + can.id).then(function (response) {
 						console.log("Success");
+						can.disabled = false;
 					}, function (response) {
 						// error callback
 					});
@@ -107,7 +106,8 @@ var app = new Vue({
         }
     },
 	mounted: function () {
-		this.$http.get('https://sudoapistaging.herokuapp.com/api/pitch/candidates').then(function (response) {
+    	var _this = this;
+		this.$http.get(_this.apiURL + 'candidates').then(function (response) {
 			var cand = response.body
 			cand.forEach(function (can) {
 				can.selected = false;
