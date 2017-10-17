@@ -2,7 +2,7 @@ var app = new Vue({
     name: 'Root2',
     el: '#voting',
     data: {
-    	apiURL: "http://am.local:9090/api/pitch/",
+    	apiURL: "https://platform.sudo.org.au/api/pitch/",
         candidates: []
     },
     methods: {
