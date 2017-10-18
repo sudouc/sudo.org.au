@@ -1,11 +1,47 @@
+import Vue from 'vue';
+import VueResource from 'vue-resource';
+
+import VueSlider from 'vue-slider-component';
+
+Vue.use(VueResource);
+
 var app = new Vue({
     name: 'Root2',
     el: '#voting',
     data: {
-    	apiURL: "https://platform.sudo.org.au/api/pitch/",
+    	max: 10,
+        maxAmount: 25,
+		amount: 25,
+    	apiURL: "http://localhost:9090/api/pitch/",
         candidates: []
     },
+    components: {
+        VueSlider
+    },
     methods: {
+        callback: function(value) {
+            app.amount = app.maxAmount;
+
+        	for(var can in app.candidates) {
+                app.amount = app.amount - app.candidates[can].amount
+            }
+		},
+		dragEnd: function (slider) {
+			var highestAmount = 0;
+            var highestIndex;
+
+			while(app.amount < 0) {
+                for(var can in app.candidates) {
+                    if(app.candidates[can].amount > highestAmount) {
+                    	highestAmount = app.candidates[can].amount;
+                    	highestIndex = can;
+					}
+                }
+
+                app.candidates[highestIndex].amount = app.candidates[highestIndex].amount - 1;
+                this.callback()
+			}
+		},
 		contains: function (needle) {
 		    // Per spec, the way to identify NaN is that it is not equal to itself
 		    var findNaN = needle !== needle;
@@ -112,6 +148,7 @@ var app = new Vue({
 			cand.forEach(function (can) {
 				can.selected = false;
 				can.disabled = false;
+				can.amount = 0;
 			});
 			app.candidates = cand;
 		}, function (response) {
