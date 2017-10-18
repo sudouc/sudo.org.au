@@ -71,8 +71,8 @@ section#hero .row h1 {
 }
 
 section#hero .row h1 small {
-  font-size: 30px;
-  font-weight: 600;
+  font-size: 26px;
+  font-weight: 500;
   color: #FFF;
 }
 
@@ -104,6 +104,19 @@ section#voting {
   padding-top: 50px;
 }
 
+section#voting h6.amount {
+  font-size: 30px;
+}
+
+section#voting .vue-slider-component .vue-slider-tooltip {
+  border: 1px solid #7394fc;
+  background-color: #7394fc;
+}
+
+section#voting .vue-slider-component .vue-slider-process {
+  background-color: #7394fc;
+}
+
 section#voting .selection {
   -webkit-transition: background 0.2s, color 0.2s, border 0.2s;
   transition: background 0.2s, color 0.2s, border 0.2s;
@@ -111,7 +124,7 @@ section#voting .selection {
   margin: 20px 0;
   background-color: #eee;
   padding: 20px 40px;
-  border-left: solid 4px #bd41cf;
+  border-left: solid 4px #7394fc;
 }
 
 section#voting .selection.voted {

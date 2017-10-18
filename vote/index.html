@@ -45,7 +45,7 @@
 				<div class="small-12 columns">
 					<h4>Below are the pitches you heard tonight,</h4>
 					<p>Slide the slider along to indicate your theoretical investment</p>
-					<h6>Amount left: ${{ amount }},000</h6>
+					<h6 class="amount">Amount left: ${{ amount }},000</h6>
 					<div v-cloak class="selection" v-for="can in candidates" :key="can.id" v-bind:disabled="{ 'disabled': can.disabled }" v-bind:class="{ 'voted': can.selected, 'disabled': can.disabled }">
 						<span v-if="can.name"><b>{{ can.name }}</b> –</span> {{ can.project }}
 						<vue-slider
