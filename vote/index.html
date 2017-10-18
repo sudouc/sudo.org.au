@@ -40,29 +40,39 @@
 	</section>
 
 	<section id="voting">
-		<div class="row">
-			<div class="small-12 columns">
-				<h4>Below are the pitches you heard tonight,</h4>
-				<p>Slide the slider along to indicate your theoretical investment</p>
-				<h6>Amount left: ${{ amount }},000</h6>
-				<div v-cloak class="selection" v-for="can in candidates" :key="can.id" v-bind:disabled="{ 'disabled': can.disabled }" v-bind:class="{ 'voted': can.selected, 'disabled': can.disabled }">
-					<span v-if="can.name"><b>{{ can.name }}</b> –</span> {{ can.project }}
-					<vue-slider
-						:id="can.id"
-						v-model="can.amount"
-						:max="25"
-						tooltip-dir="bottom"
-						v-on:callback="callback"
-						formatter="${value},000"
-						v-on:drag-end="dragEnd"
-						:clickable="false"
-					></vue-slider>
+		<div v-if="!submitted">
+			<div class="row">
+				<div class="small-12 columns">
+					<h4>Below are the pitches you heard tonight,</h4>
+					<p>Slide the slider along to indicate your theoretical investment</p>
+					<h6>Amount left: ${{ amount }},000</h6>
+					<div v-cloak class="selection" v-for="can in candidates" :key="can.id" v-bind:disabled="{ 'disabled': can.disabled }" v-bind:class="{ 'voted': can.selected, 'disabled': can.disabled }">
+						<span v-if="can.name"><b>{{ can.name }}</b> –</span> {{ can.project }}
+						<vue-slider
+								:id="can.id"
+								v-model="can.amount"
+								:max="25"
+								tooltip-dir="bottom"
+								v-on:callback="callback"
+								formatter="${value},000"
+								v-on:drag-end="dragEnd"
+								:clickable="false"
+						></vue-slider>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="column">
+					<div class="button primary expanded" @click="submit">Submit</div>
 				</div>
 			</div>
 		</div>
-		<div class="row">
-			<div class="column">
-				<div class="button primary expanded">Submit </div>
+		<div v-if="comeback">
+			<div class="row">
+				<div class="small-12 columns">
+					<h4>Thank you for submitting!</h4>
+					<p>Have a great night!</p>
+				</div>
 			</div>
 		</div>
 	</section>

@@ -1,8 +1,9 @@
 import Vue from 'vue';
 import VueResource from 'vue-resource';
-
+import VueCookie from 'vue-cookie';
 import VueSlider from 'vue-slider-component';
 
+Vue.use(VueCookie);
 Vue.use(VueResource);
 
 var app = new Vue({
@@ -12,8 +13,10 @@ var app = new Vue({
     	max: 10,
         maxAmount: 25,
 		amount: 25,
-    	apiURL: "https://platform.sudo.org.au/api/pitch/",
-        candidates: []
+    	apiURL: "http://am.local:9090/api/pitch/",
+        candidates: [],
+		submitted: false,
+		comeback: false
     },
     components: {
         VueSlider
@@ -81,81 +84,41 @@ var app = new Vue({
 				app.refresh();
 			}, 10000)
 		},
-		toggleDisabled: function() {
-            app.candidates.forEach(function (can) {
-                if (can.selected == true) {
-                    numberOfSelected++;
-                }
-            });
-		},
-        selectCan: function (can) {
-			var _this = this;
-            // Change Selected Value on Object
-            if (can.selected) {
-            	can.disabled = true;
-				this.$http.get(_this.apiURL + 'downvote/' + can.id).then(function (response) {
-					console.log("Success");
-					can.disabled = false;
-				}, function (response) {
-					// error callback
-				});
-                can.selected = false;
-            } else {
-                if (!can.disabled) {
-                	can.disabled = true;
-					this.$http.get(_this.apiURL + 'vote/' + can.id).then(function (response) {
-						console.log("Success");
-						can.disabled = false;
-					}, function (response) {
-						// error callback
-					});
-                    can.selected = true;
-                }
-            }
+        submit: function() {
+        	var _this = this;
+        	this.submitted = true;
+			this.$http.post(_this.apiURL + 'vote/', { 'candidates': this.candidates }).then(function (response) {
+				if(response.body.length > 0) {
+                    this.$cookie.set('vote', '1827129361', {expires: 1});
 
-            var count = function () {
-                var numberOfSelected = 0;
-                app.candidates.forEach(function (can) {
-                    if (can.selected == true) {
-                        numberOfSelected++;
-                    }
-                });
-                return numberOfSelected;
-            }();
+                    this.comeback = true;
+				}
+			}, function (response) {
+				// error callback
+			});
 
-            if (count >= 3) {
-                app.candidates.forEach(function (can) {
-                    if (can.selected == false) {
-                        can.disabled = true;
-                    }
-                });
-            } else {
-                app.candidates.forEach(function (can) {
-                    can.disabled = false;
-                });
-            }
-
-			Vue.nextTick(function () {
-			  // DOM updated
-			})
-            console.log(can);
-        }
+		}
     },
 	mounted: function () {
     	var _this = this;
-		this.$http.get(_this.apiURL + 'candidates').then(function (response) {
-			var cand = response.body
-			cand.forEach(function (can) {
-				can.selected = false;
-				can.disabled = false;
-				can.amount = 0;
-			});
-			app.candidates = cand;
-		}, function (response) {
-			// error callback
-		});
+    	if(_this.$cookie.get('vote') === '1827129361') {
+            _this.submitted = true;
+    		_this.comeback = true;
+		} else {
+            this.$http.get(_this.apiURL + 'candidates').then(function (response) {
+                var cand = response.body
+                cand.forEach(function (can) {
+                    can.selected = false;
+                    can.disabled = false;
+                    can.amount = 0;
+                });
+                app.candidates = cand;
+            }, function (response) {
+                // error callback
+            });
+        }
 
 	}
 })
 
-app.refresh();
+// app.refresh();
