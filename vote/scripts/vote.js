@@ -87,7 +87,7 @@ var app = new Vue({
         submit: function() {
         	var _this = this;
         	this.submitted = true;
-			this.$http.post(_this.apiURL + 'vote/', { 'candidates': this.candidates }).then(function (response) {
+			this.$http.post(_this.apiURL + 'vote', { 'candidates': this.candidates }).then(function (response) {
 				if(response.body.length > 0) {
                     this.$cookie.set('vote', '1827129361', {expires: 1});
 
