@@ -13,7 +13,7 @@ var app = new Vue({
     	max: 10,
         maxAmount: 25,
 		amount: 25,
-    	apiURL: "http://am.local:9090/api/pitch/",
+    	apiURL: "https://platform.sudo.org.au/api/pitch/",
         candidates: [],
 		submitted: false,
 		comeback: false
