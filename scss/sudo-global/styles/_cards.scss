@@ -7,7 +7,7 @@ section {
         height: auto;
         min-height: auto;
 
-        .row {
+        .grid-container {
             min-height: auto;
         }
 
@@ -21,19 +21,29 @@ section {
 
         .callout {
             position: relative;
+            padding: 2rem 4rem;
             padding-left: 7rem;
+            margin-bottom: 2rem;
+
+
+
 
             @include breakpoint(medium) {
                 padding-left: 6rem;
+                margin-bottom: 0;
+                height: 100%;
             }
 
             h4 {
+                font-family: "Circular Std";
+                font-weight: 200;
                 font-size: 20px;
             }
 
             p {
                 color: #cdcdcd;
                 transition: color 0.2s;
+                margin-bottom: 0;
             }
 
             &:before {
@@ -41,6 +51,8 @@ section {
                 display: block;
                 position: absolute;
                 left: 0;
+                top: 50%;
+                transform: translateY(-50%);
             }
 
             &.github {
@@ -71,7 +83,6 @@ section {
                     background-size: 89px 115px;
                     width: 89px;
                     height: 115px;
-                    top: 20px;
                 }
             }
 

@@ -21,7 +21,7 @@
 
 <body>
 	<header class="overlap" data-sticky-container>
-		<div class="row">
+		<div class="grid-container grid-x grid-padding-x">
 			<div class="column text-center">
 				<a href="/" class="logo-for-pitch-night">
 					Powered by <b>Sudo</b>
@@ -32,8 +32,8 @@
 
 
 	<section id="hero">
-		<div class="row align-middle">
-			<div class="small-12 medium-12 text-center columns">
+		<div class="grid-container grid-x grid-padding-x align-middle">
+			<div class="small-12 medium-12 text-center cell">
 				<h1><small>Entry 29 Lift Off 🚀</small><br><b>Pitch Event</b></h1>
 			</div>
 		</div>
@@ -41,8 +41,8 @@
 
 	<section id="voting">
 		<div v-if="!submitted">
-			<div class="row">
-				<div class="small-12 columns">
+			<div class="grid-container grid-x grid-padding-x">
+				<div class="small-12 cell">
 					<h4>Below are the pitches you heard tonight,</h4>
 					<p>Slide the slider along to indicate your theoretical investment</p>
 					<h6 class="amount">Amount left: ${{ amount }},000</h6>
@@ -61,15 +61,15 @@
 					</div>
 				</div>
 			</div>
-			<div class="row">
+			<div class="grid-container grid-x grid-padding-x">
 				<div class="column">
 					<div class="button primary expanded" @click="submit">Submit</div>
 				</div>
 			</div>
 		</div>
 		<div v-if="comeback">
-			<div class="row">
-				<div class="small-12 columns">
+			<div class="grid-container grid-x grid-padding-x">
+				<div class="small-12 cell">
 					<h4>Thank you for submitting!</h4>
 					<p>Have a great night!</p>
 				</div>

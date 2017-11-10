@@ -15,3 +15,4 @@
 
 <!--#set var="registerURL" value="http://platform.sudo.org.au/register" -->
 <!--#set var="signInURL" value="http://platform.sudo.org.au/login" -->
+<!--#set var="footerType" value="" -->

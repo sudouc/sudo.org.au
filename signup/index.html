@@ -23,63 +23,63 @@
 
 	<section id="hero">
 
-			<div class="row align-middle">
-				<div class="small-12 small-centered columns text-center relative">
+			<div class="grid-container grid-x grid-padding-x align-middle">
+				<div class="small-12 small-centered cell text-center relative">
 					<transition name="fade">
 						<div class="" v-if="stage == 1">
 							<h3>Sign Up</h3>
-							<div class="row align-center">
+							<div class="grid-container grid-x grid-padding-x align-center">
 
 
-								<div class="form small-6 columns" role="form" method="POST" action="<!--#echo var="registerURL" -->">
+								<div class="form small-6 cell" role="form" method="POST" action="<!--#echo var="registerURL" -->">
 									<input type="hidden" name="_token" value="0ivzAJQZyfJDHiIyH1nlj4XTazHvtWxuSyMrfbZo">
 
 									<div class="form-group">
-										<label for="name" class="small-12 columns control-label">Name</label>
+										<label for="name" class="small-12 cell control-label">Name</label>
 
-										<div class="small-12 columns">
+										<div class="small-12 cell">
 											<input v-model="name" id="name" type="text" class="form-control" name="name" value="" required="" autofocus="">
 
 																</div>
 									</div>
 
 									<div class="form-group">
-										<label for="email" class="small-12 columns control-label">E-Mail Address</label>
+										<label for="email" class="small-12 cell control-label">E-Mail Address</label>
 
-										<div class="small-12 columns">
+										<div class="small-12 cell">
 											<input v-model="email" id="email" type="email" class="form-control" name="email" value="" required="">
 
 																</div>
 									</div>
 
 									<div class="form-group">
-										<label for="email" class="small-12 columns control-label">Student ID</label>
+										<label for="email" class="small-12 cell control-label">Student ID</label>
 
-										<div class="small-12 columns">
+										<div class="small-12 cell">
 											<input v-model="studentid" id="studentid" type="text" class="form-control" name="studentid" value="" required="">
 
 																</div>
 									</div>
 
 									<div class="form-group">
-										<label for="password" class="small-12 columns control-label">Password</label>
+										<label for="password" class="small-12 cell control-label">Password</label>
 
-										<div class="small-12 columns">
+										<div class="small-12 cell">
 											<input v-model="password" id="password" type="password" class="form-control" name="password" required="">
 
 																</div>
 									</div>
 
 									<div class="form-group">
-										<label for="password-confirm" class="small-12 columns control-label">Confirm Password</label>
+										<label for="password-confirm" class="small-12 cell control-label">Confirm Password</label>
 
-										<div class="small-12 columns">
+										<div class="small-12 cell">
 											<input v-model="passwordconfirm" id="password-confirm" type="password" class="form-control" name="password_confirmation" required="">
 										</div>
 									</div>
 
 									<div class="form-group">
-										<div class="small-12 columns small-o columnsffset-4">
+										<div class="small-12 cell small-o cellffset-4">
 											<button @click="nextStage(2)" class="button primary">
 												Register
 											</button>

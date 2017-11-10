@@ -2,31 +2,9 @@
 
 /**
  * sw for Sites by Sudo
- * Version 6.3.0
+ * Version 0.1.7
  * sudo.org.au
  * Licensed under MIT Open Source
- */
-
-/*
- * Height mesured in 1 to 5.
- * Adds Box-Shadow to elements
- */
-
-/*
- * Height mesured in 1 to 5.
- * Adds Box-Shadow to elements
- */
-
-/* Gradients */
-
-/*
- * Height mesured in 1 to 5.
- * Adds Box-Shadow to elements
- */
-
-/*
- * Height mesured in 1 to 5.
- * Adds Box-Shadow to elements
  */
 
 html,
@@ -44,7 +22,7 @@ header .logo-for-pitch-night b {
   font-weight: 600;
 }
 
-section .row {
+section .grid-container {
   position: relative;
 }
 
@@ -58,45 +36,46 @@ section#hero {
   overflow: hidden;
 }
 
-section#hero .row {
+section#hero .grid-container {
   height: calc(100%);
   z-index: 2;
   position: relative;
 }
 
-section#hero .row h1 {
+section#hero .grid-container h1 {
+  color: #FFF;
   font-size: 3rem;
   margin-bottom: 0px;
   line-height: 45px;
 }
 
-section#hero .row h1 small {
+section#hero .grid-container h1 small {
   font-size: 26px;
   font-weight: 500;
   color: #FFF;
 }
 
-section#hero .row h1 b {
+section#hero .grid-container h1 b {
   font-weight: 500;
 }
 
-section#hero .row h3 {
+section#hero .grid-container h3 {
   color: #dcabe5;
   font-size: 28px;
   margin-bottom: 20px;
 }
 
-section#hero .row p {
+section#hero .grid-container p {
   color: #dcabe5;
   font-size: 20px;
 }
 
-section#hero .row p span {
+section#hero .grid-container p span {
   display: block;
   color: #FFF;
 }
 
-section#hero .row a.button.more {
+section#hero .grid-container a.button.more {
   color: #8f61c2;
 }
 

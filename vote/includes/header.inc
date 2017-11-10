@@ -1,5 +1,5 @@
 <header class="overlap" id="header" data-sticky-container>
-	<div class="row">
+	<div class="grid-container grid-x grid-padding-x">
 		<div class="column">
 			<a href="/">
 				<div class="logo"></div>

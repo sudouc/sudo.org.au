@@ -12,8 +12,12 @@ app.use(connectSSI({
 
 app.use(express.static('./'))
 
+app.use(function(req, res, next) {
+    res.status(404);
+    res.send('404: File Not Found');
+});
 
-app.listen(3001, function () {
+app.listen(3080, function () {
 	console.log('Express Begun Successfully')
 })
 
@@ -21,7 +25,7 @@ app.listen(3001, function () {
 mix.autoload({})
 
 mix.browserSync({
-    proxy: 'localhost:3001',
+    proxy: 'localhost:3080',
 	files: ['**/*']
 });
 
@@ -46,11 +50,12 @@ mix.webpackConfig({
 
  /* Folder, Name */
  var styles = [
-	[ 'about', 'about' ],
-	[ 'home', 'home' ],
-	[ 'projects', 'projects' ],
+     [ '404', '404' ],
+     [ 'about', 'about' ],
+	 [ 'home', 'home' ],
+	 [ 'projects', 'projects' ],
 	 [ 'vote', 'vote' ],
-	[ 'sudo-global', 'sudo-global' ],
+	 [ 'sudo-global', 'sudo-global' ],
 ]
 
 var fip = { includePaths: ['node_modules/foundation-sites/scss/', 'scss/sudo-global/styles/']};

@@ -1,37 +1,15 @@
 /**
  * sw for Sites by Sudo
- * Version 6.3.0
+ * Version 0.1.7
  * sudo.org.au
  * Licensed under MIT Open Source
- */
-
-/*
- * Height mesured in 1 to 5.
- * Adds Box-Shadow to elements
- */
-
-/*
- * Height mesured in 1 to 5.
- * Adds Box-Shadow to elements
- */
-
-/* Gradients */
-
-/*
- * Height mesured in 1 to 5.
- * Adds Box-Shadow to elements
- */
-
-/*
- * Height mesured in 1 to 5.
- * Adds Box-Shadow to elements
  */
 
 section {
   min-height: 700px;
 }
 
-section .row {
+section .grid-container {
   min-height: 700px;
   position: relative;
 }
@@ -53,32 +31,33 @@ section#hero {
   }
 }
 
-section#hero .row {
+section#hero .grid-container {
   height: calc(100%);
   z-index: 2;
   position: relative;
 }
 
-section#hero .row h1 {
+section#hero .grid-container h1 {
+  color: #FFF;
   margin-bottom: 0px;
   line-height: 40px;
 }
 
-section#hero .row h1 b {
+section#hero .grid-container h1 b {
   font-weight: 500;
 }
 
-section#hero .row h3 {
+section#hero .grid-container h3 {
   color: #76e163;
   font-size: 26px;
   margin-bottom: 20px;
 }
 
-section#hero .row p {
+section#hero .grid-container p {
   color: #a9ed9d;
 }
 
-section#hero .row a.button.more {
+section#hero .grid-container a.button.more {
   color: #4eb953;
 }
 
@@ -104,72 +83,5 @@ section#hero figure.macbook {
   section#hero figure.macbook {
     right: -411px;
   }
-}
-
-section#cards {
-  z-index: 3;
-  position: relative;
-  margin-top: -90px;
-  height: auto;
-  min-height: auto;
-}
-
-section#cards .row {
-  min-height: auto;
-}
-
-section#cards .callout {
-  position: relative;
-  padding-left: 7rem;
-}
-
-@media print, screen and (min-width: 40em) {
-  section#cards .callout {
-    padding-left: 6rem;
-  }
-}
-
-section#cards .callout h4 {
-  font-size: 20px;
-}
-
-section#cards .callout p {
-  color: #cdcdcd;
-  -webkit-transition: color 0.2s;
-  transition: color 0.2s;
-}
-
-section#cards .callout:before {
-  content: " ";
-  display: block;
-  position: absolute;
-  left: 0;
-}
-
-section#cards .callout.github h4 {
-  color: #f34f29;
-}
-
-section#cards .callout.github:before {
-  background-image: url("/home/images/gitrepo_2x.png");
-  background-size: 76px 91px;
-  width: 76px;
-  height: 91px;
-}
-
-section#cards .callout.ninja h4 {
-  color: #774be3;
-}
-
-section#cards .callout.ninja:hover p {
-  color: #d5c8f2;
-}
-
-section#cards .callout.ninja:before {
-  background-image: url("/home/images/devninja_2x.png");
-  background-size: 89px 115px;
-  width: 89px;
-  height: 115px;
-  top: 20px;
 }
 

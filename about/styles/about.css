@@ -1,40 +1,30 @@
 /**
  * sw for Sites by Sudo
- * Version 6.3.0
+ * Version 0.1.7
  * sudo.org.au
  * Licensed under MIT Open Source
  */
 
-/*
- * Height mesured in 1 to 5.
- * Adds Box-Shadow to elements
- */
-
-/*
- * Height mesured in 1 to 5.
- * Adds Box-Shadow to elements
- */
-
-/* Gradients */
-
-/*
- * Height mesured in 1 to 5.
- * Adds Box-Shadow to elements
- */
-
-/*
- * Height mesured in 1 to 5.
- * Adds Box-Shadow to elements
- */
-
 section {
   padding: 100px 0;
-  min-height: 700px;
+  min-height: 900px;
+  height: auto;
 }
 
-section .row {
+@media print, screen and (min-width: 40em) {
+  section {
+    height: 80vh;
+  }
+}
+
+section .grid-container {
   min-height: 700px;
+  height: 100%;
   position: relative;
+}
+
+section .grid-container .grid-x {
+  height: 100%;
 }
 
 section#hero {
@@ -42,7 +32,8 @@ section#hero {
   background-size: cover;
   background-position: center;
   width: 100%;
-  min-height: 75vh;
+  min-height: 800px;
+  height: 75vh;
   color: #FFF;
   overflow: hidden;
   padding-top: 100px;
@@ -54,27 +45,33 @@ section#hero {
   }
 }
 
-section#hero .row {
+section#hero .grid-container {
+  height: 100%;
   z-index: 2;
   position: relative;
 }
 
-section#hero .row h1 {
+section#hero .grid-container .grid-x {
+  height: 100%;
+}
+
+section#hero .grid-container h1 {
+  color: #FFF;
   margin-bottom: 0px;
   line-height: 40px;
 }
 
-section#hero .row h1 b {
+section#hero .grid-container h1 b {
   font-weight: 500;
 }
 
-section#hero .row h3 {
+section#hero .grid-container h3 {
   color: #ff9b98;
   font-size: 26px;
   margin-bottom: 20px;
 }
 
-section#hero .row a.button.more {
+section#hero .grid-container a.button.more {
   color: #ff4545;
 }
 
@@ -124,17 +121,19 @@ section#languages {
 }
 
 section#languages figure {
-  width: 299px;
-  height: 451px;
+  width: 100%;
+  height: 200px;
   margin: 0 auto;
   margin-bottom: 40px;
-  background-image: url("/about/images/languages_logo_large.png");
-  background-size: 299px 451px;
+  background-image: url("/about/images/languages_logo_small.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 @media screen and (-webkit-min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
   section#languages figure {
-    background-image: url("/about/images/languages_logo_large_2x.png");
+    background-image: url("/about/images/languages_logo_small_2x.png");
   }
 }
 
@@ -147,6 +146,12 @@ section#languages figure {
     position: absolute;
     top: 120px;
     left: -70px;
+  }
+}
+
+@media screen and (min-width: 40em) and (-webkit-min-device-pixel-ratio: 2), print and (-webkit-min-device-pixel-ratio: 2), print and (min-resolution: 192dpi), screen and (min-width: 40em) and (min-resolution: 192dpi) {
+  section#languages figure {
+    background-image: url("/about/images/languages_logo_large_2x.png");
   }
 }
 
@@ -231,7 +236,6 @@ section#helloworld p {
 section#eightweek {
   background-color: #fff;
   position: relative;
-  padding: 50px 0;
 }
 
 section#eightweek .promo {
@@ -310,7 +314,7 @@ section#eightweek p {
 section#router {
   padding: 0;
   min-height: auto;
-  height: 250px;
+  height: 290px;
   background-image: url("/about/images/projects_router_large.jpg");
   background-size: cover;
   background-position: center;
@@ -329,9 +333,10 @@ section#router a:hover figure {
   transform: translate(25px, -25px);
 }
 
-section#router .row {
+section#router .grid-container {
   min-height: auto;
-  padding: 45px 0;
+  padding-top: 45px;
+  padding-bottom: 90px;
 }
 
 section#router figure {

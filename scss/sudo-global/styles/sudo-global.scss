@@ -1,10 +1,19 @@
-$fa-font-path:        "./fonts";
+@charset "utf-8";
 
-@import "~sudo-web-framework/scss/sudoweb";
+// Font Awesome
+$fa-font-path: "./fonts";
 @import "./font-awesome/font-awesome";
+
+// Sudo Framework
 @import "settings";
+@import '~foundation-sites/scss/foundation';
+@import "~sudo-web-framework/scss/sudoweb";
+
+@include foundation-everything();
+@include sudo-override();
+
 @import "cards";
-@include sw-everything(true);
+
 
 
 .button {
@@ -109,7 +118,7 @@ header {
 				font-size: 14px;
 				font-weight: 600;
 				letter-spacing: .025em;
-				color: #8898aa;
+				color: #a4b7cd;
 				text-transform: uppercase;
 				margin: 0 0 0 20px;
 			}
@@ -123,6 +132,11 @@ header {
 					display: block;
 					padding: 15px 20px;
 					font-size: 18px;
+				}
+
+				hr {
+					margin: 10px 0;
+					border-bottom-color: #eee;
 				}
 			}
 
@@ -207,14 +221,22 @@ header {
 
 
 footer {
-    margin: 20px 0 100px 0;
+    margin: 40px 0 0 0;
+	padding-bottom: 100px;
 
-    .column {
+	&.type1 {
+		background-color: #f6f9fc;
+		margin-top: -100px;
+		padding-top: 140px;
+	}
+
+    .cell {
         position: relative;
     }
     .legal {
         display: block;
-        font-size: 11px;
+        font-size: 14px;
+		font-weight: 500;
         color: rgb(170, 170, 170);
     }
 

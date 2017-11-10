@@ -22,9 +22,6 @@ section#hero:after {
   height: 85vh;
   top: 0;
   position: absolute;
-  background-image: url("/home/images/home-background.jpg");
-  background-size: cover;
-  background-position: center;
   opacity: 1;
   z-index: 1;
 }
@@ -48,6 +45,14 @@ section#hero .grid-container h1 b {
   section#hero .grid-container h1 {
     line-height: 50px;
   }
+}
+
+section#hero .grid-container p a {
+  color: #FFF;
+}
+
+section#hero .grid-container p a:hover {
+  color: #cccccc;
 }
 
 section#hero .grid-container h3 {

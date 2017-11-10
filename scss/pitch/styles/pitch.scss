@@ -5,7 +5,7 @@ html, body {
 }
 section {
 
-    .row {
+    .grid-container {
         position: relative;
     }
 
@@ -20,7 +20,7 @@ section {
         color: #FFF;
         overflow: hidden;
 
-        .row {
+        .grid-container {
             height: calc(100%);
             z-index: 2;
             position: relative;
@@ -141,7 +141,7 @@ section {
 			margin: 0;
 		}
 
-		.row {
+		.grid-container {
 			&.margin-top {
 				margin-top: 2rem;
 			}
@@ -208,7 +208,7 @@ section {
 		height: auto;
 		min-height: auto;
 
-		.row {
+		.grid-container {
 			min-height: auto;
 		}
 

@@ -15,7 +15,7 @@ header {
   }
 }
 section {
-    .row {
+    .grid-container {
         position: relative;
     }
 
@@ -30,12 +30,13 @@ section {
         color: #FFF;
         overflow: hidden;
 
-        .row {
+        .grid-container {
             height: calc(100%);
             z-index: 2;
             position: relative;
 
             h1 {
+                color: $white;
 				font-size: 3rem;
                 margin-bottom: 0px;
                 line-height: 45px;

@@ -1,0 +1,57 @@
+@import "~sudo-web-framework/scss/sudoweb";
+
+section {
+  &#hero {
+    @include sw-gradient("sudobg");
+    $content-height: 85vh;
+
+    width: 100%;
+    height: $content-height;
+    color: #FFF;
+
+    &:after {
+      display: block;
+      content: "";
+      width: 100%;
+      height: $content-height;
+      top: 0;
+      position: absolute;
+
+      opacity: 1;
+      z-index: 1;
+    }
+
+    .grid-container {
+      height: calc(100%);
+      z-index: 2;
+      position: relative;
+
+      h1 {
+        color: $white;
+        line-height: 25px;
+
+        b {
+          font-weight: 600;
+        }
+        @include breakpoint(medium) {
+          line-height: 50px;
+        }
+      }
+
+      p {
+        a {
+          color: $white;
+
+          &:hover {
+            color: darken($white, 20%);
+          }
+        }
+      }
+
+      h3 {
+        color: #d1e2ed;
+        font-size: 20px;
+      }
+    }
+  }
+}
