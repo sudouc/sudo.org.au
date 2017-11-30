@@ -82,10 +82,17 @@ section {
     overflow-x: hidden;
     min-height: 200px;
     height: auto;
-    padding: 200px 0;
+    padding: 100px 0;
+
+    @include breakpoint(medium) {
+      padding: 200px 0;
+    }
 
     .grid-container {
       min-height: 200px;
+      .cell {
+        margin-bottom: 60px;
+      }
     }
     h2 {
       color: #342b2b;

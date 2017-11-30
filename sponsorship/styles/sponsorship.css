@@ -87,11 +87,21 @@ section#details {
   overflow-x: hidden;
   min-height: 200px;
   height: auto;
-  padding: 200px 0;
+  padding: 100px 0;
+}
+
+@media print, screen and (min-width: 40em) {
+  section#details {
+    padding: 200px 0;
+  }
 }
 
 section#details .grid-container {
   min-height: 200px;
+}
+
+section#details .grid-container .cell {
+  margin-bottom: 60px;
 }
 
 section#details h2 {
