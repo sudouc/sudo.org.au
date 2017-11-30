@@ -1,0 +1,284 @@
+@import "~sudo-web-framework/scss/sudoweb";
+
+section {
+  padding: 100px 0;
+  min-height: 900px;
+  height: auto;
+
+  @include breakpoint(medium) {
+    height: 80vh;
+  }
+
+  .grid-container {
+    min-height: 700px;
+    height: 100%;
+    position: relative;
+
+    .grid-x {
+      height: 100%;
+    }
+  }
+
+  &#hero {
+    $content-height: 75vh;
+    @include sw-gradient('sudo')
+    // background-image: url("/about/images/hero_background_large.jpg");
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    min-height: 800px;
+    height: $content-height;
+    color: #FFF;
+    overflow: hidden;
+    // padding-top: 100px;
+
+    @include breakpoint(retina) {
+      // background-image: url("/about/images/hero_background_large_2x.jpg");
+    }
+
+    .grid-container {
+      height: 100%;
+      z-index: 2;
+      position: relative;
+
+      .grid-x {
+        height: 100%;
+      }
+
+      i {
+        font-size: 50px;
+        margin-bottom: 40px;
+        @include breakpoint(medium) {
+          font-size: 70px;
+        }
+      }
+
+      h1 {
+        color: $white;
+        margin-bottom: 30px;
+        line-height: 40px;
+
+        b {
+          font-weight: 500;
+        }
+      }
+
+      h4 {
+        margin-bottom: 0px;
+        color: #94c6ff;
+        // font-size: 26px;
+
+      }
+
+      a.button.more {
+        color: #ff4545;
+      }
+    }
+  }
+
+  &#details {
+    width: 100%;
+    color: #FFF;
+    overflow-x: hidden;
+    min-height: 200px;
+    height: auto;
+    padding: 200px 0;
+
+    .grid-container {
+      min-height: 200px;
+    }
+    h2 {
+      color: #342b2b;
+      font-size: 2.3rem;
+      font-weight: 500;
+      margin: 0;
+      line-height: 40px;
+    }
+    h4 {
+      color: $primary-color;
+    }
+    p {
+      color: #342b2b;
+    }
+  }
+  &#helloworld {
+    background-color: #1c1a19;
+    position: relative;
+
+    &:before {
+      display: block;
+      content: "";
+      width: 100%;
+      height: 100%;
+      top: 0;
+      position: absolute;
+      background-image: url("/about/images/helloworld_background_large.png");
+      background-size: cover;
+      background-position: center;
+      opacity: 1;
+      z-index: 0;
+      @include breakpoint(retina) {
+        background-image: url("/about/images/helloworld_background_large_2x.png");
+      }
+    }
+
+    figure.logo {
+      background-image: url('/about/images/helloworld_logo_large.png');
+      background-size: 241px 241px;
+      height: 241px;
+      width: 241px;
+      margin: 80px auto 0;
+
+      @include breakpoint(medium) {
+        float: right;
+        margin: 0
+      }
+
+      @include breakpoint(retina) {
+        background-image: url('/about/images/helloworld_logo_large_2x.png');
+      }
+    }
+
+    h2 {
+      color: #fff;
+      font-size: 2.3rem;
+      font-weight: 500;
+      margin: 0;
+      line-height: 40px;
+    }
+    h4 {
+      color: #ec4e48;
+    }
+    p {
+      color: #e8e8e8;
+    }
+  }
+
+  &#eightweek {
+    background-color: #fff;
+    position: relative;
+
+    .promo {
+      max-width: 424px;
+      margin: 0 auto;
+      margin-bottom: 80px;
+
+      @include breakpoint(medium) {
+        width: auto;
+        margin-right: 50px;
+        flex: 0 0 424px;
+        margin-bottom: 0;
+
+      }
+
+      @include breakpoint(large) {
+        flex: 0 0 434px;
+        max-width: 434px;
+      }
+
+      .box {
+        background-image: url('/about/images/8w_promo_background_large.png');
+        background-repeat: none;
+        background-position: center;
+        background-size: 404px 582px;
+        height: 582px;
+        padding: 0 40px;
+        padding-top: 350px;
+        border-radius: 5px;
+        box-shadow: 0px 3px 65px 0px rgba(20, 72, 96, 0.09), 0px 3px 40px 0px rgba(20, 72, 96, 0.07), 0px 14px 40px 0px rgba(20, 72, 96, 0.07);
+
+        @include breakpoint(retina) {
+          background-image: url('/about/images/8w_promo_background_large_2x.png');
+        }
+      }
+
+      h4 {
+        color: #fff;
+      }
+      p {
+        color: #e8e8e8;
+      }
+      a {
+        color: #ec4e48;
+      }
+
+    }
+
+    h2 {
+      font-size: 2.3rem;
+      font-weight: 500;
+      margin: 0;
+      line-height: 40px;
+      color: #342b2b;
+    }
+    h4 {
+      color: #ec4e48;
+    }
+    p {
+      color: #342b2b;
+    }
+  }
+
+  &#router {
+    padding: 0;
+    min-height: auto;
+    height: 290px;
+    background-image: url('/about/images/projects_router_large.jpg');
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    position: relative;
+
+    @include breakpoint(retina) {
+      background-image: url('/about/images/projects_router_large_2x.jpg');
+    }
+
+    a:hover {
+      figure {
+        -moz-transform: translate(25px, -25px);
+        -webkit-transform: translate(25px, -25px);
+        -o-transform: translate(25px, -25px);
+        -ms-transform: translate(25px, -25px);
+        transform: translate(25px, -25px);
+
+      }
+    }
+
+    .grid-container {
+      min-height: auto;
+      padding-top: 45px;
+      padding-bottom: 90px;
+    }
+
+    figure {
+      background-image: url('/about/images/router_iphones_large.png');
+      background-size: 679px 476px;
+      height: 476px;
+      width: 679px;
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 150px;
+      transition: transform .3s;
+
+      @include breakpoint(medium) {
+        left: auto;
+      }
+
+      @include breakpoint(retina) {
+        background-image: url('/about/images/router_iphones_large_2x.png');
+      }
+    }
+
+    h2 {
+      font-size: 2.3rem;
+      font-weight: 500;
+      margin: 0;
+      line-height: 40px;
+      color: #fff;
+    }
+    h5 {
+      color: #fff;
+    }
+  }
+}

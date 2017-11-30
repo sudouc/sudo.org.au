@@ -8,6 +8,24 @@ $foundation-palette: (
         warning: #ffae00,
         alert: #f15034,
 );
+$header-styles: (
+        small: (
+                'h1': ('font-size': 24),
+                'h2': ('font-size': 20),
+                'h3': ('font-size': 19),
+                'h4': ('font-size': 18),
+                'h5': ('font-size': 17),
+                'h6': ('font-size': 16),
+        ),
+        medium: (
+                'h1': ('font-size': 52),
+                'h2': ('font-size': 38),
+                'h3': ('font-size': 31),
+                'h4': ('font-size': 25),
+                'h5': ('font-size': 20),
+                'h6': ('font-size': 16),
+        ),
+);
 $header-color: #32325d;
 $header-small-font-color: #afbec9;
 $body-font-color: #6b7c93;

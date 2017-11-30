@@ -55,6 +55,7 @@ mix.webpackConfig({
 	 [ 'home', 'home' ],
 	 [ 'projects', 'projects' ],
 	 [ 'vote', 'vote' ],
+     [ 'sponsorship', 'sponsorship' ],
 	 [ 'sudo-global', 'sudo-global' ],
 ]
 

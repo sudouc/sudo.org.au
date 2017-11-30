@@ -1,0 +1,319 @@
+/**
+ * sw for Sites by Sudo
+ * Version 0.1.7
+ * sudo.org.au
+ * Licensed under MIT Open Source
+ */
+
+section {
+  padding: 100px 0;
+  min-height: 900px;
+  height: auto;
+}
+
+@media print, screen and (min-width: 40em) {
+  section {
+    height: 80vh;
+  }
+}
+
+section .grid-container {
+  min-height: 700px;
+  height: 100%;
+  position: relative;
+}
+
+section .grid-container .grid-x {
+  height: 100%;
+}
+
+section#hero {
+  background: #8b53ff;
+  /* Old browsers */
+  background-image: linear-gradient(11deg, #8b53ff 0%, #4da4ff 100%);
+  background-image: -ms-linear-gradient(11deg, #8b53ff 0%, #4da4ff 100%);
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  min-height: 800px;
+  height: 75vh;
+  color: #FFF;
+  overflow: hidden;
+}
+
+section#hero .grid-container {
+  height: 100%;
+  z-index: 2;
+  position: relative;
+}
+
+section#hero .grid-container .grid-x {
+  height: 100%;
+}
+
+section#hero .grid-container i {
+  font-size: 50px;
+  margin-bottom: 40px;
+}
+
+@media print, screen and (min-width: 40em) {
+  section#hero .grid-container i {
+    font-size: 70px;
+  }
+}
+
+section#hero .grid-container h1 {
+  color: #FFF;
+  margin-bottom: 30px;
+  line-height: 40px;
+}
+
+section#hero .grid-container h1 b {
+  font-weight: 500;
+}
+
+section#hero .grid-container h4 {
+  margin-bottom: 0px;
+  color: #94c6ff;
+}
+
+section#hero .grid-container a.button.more {
+  color: #ff4545;
+}
+
+section#details {
+  width: 100%;
+  color: #FFF;
+  overflow-x: hidden;
+  min-height: 200px;
+  height: auto;
+  padding: 200px 0;
+}
+
+section#details .grid-container {
+  min-height: 200px;
+}
+
+section#details h2 {
+  color: #342b2b;
+  font-size: 2.3rem;
+  font-weight: 500;
+  margin: 0;
+  line-height: 40px;
+}
+
+section#details h4 {
+  color: #7394fc;
+}
+
+section#details p {
+  color: #342b2b;
+}
+
+section#helloworld {
+  background-color: #1c1a19;
+  position: relative;
+}
+
+section#helloworld:before {
+  display: block;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  position: absolute;
+  background-image: url("/about/images/helloworld_background_large.png");
+  background-size: cover;
+  background-position: center;
+  opacity: 1;
+  z-index: 0;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  section#helloworld:before {
+    background-image: url("/about/images/helloworld_background_large_2x.png");
+  }
+}
+
+section#helloworld figure.logo {
+  background-image: url("/about/images/helloworld_logo_large.png");
+  background-size: 241px 241px;
+  height: 241px;
+  width: 241px;
+  margin: 80px auto 0;
+}
+
+@media print, screen and (min-width: 40em) {
+  section#helloworld figure.logo {
+    float: right;
+    margin: 0;
+  }
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  section#helloworld figure.logo {
+    background-image: url("/about/images/helloworld_logo_large_2x.png");
+  }
+}
+
+section#helloworld h2 {
+  color: #fff;
+  font-size: 2.3rem;
+  font-weight: 500;
+  margin: 0;
+  line-height: 40px;
+}
+
+section#helloworld h4 {
+  color: #ec4e48;
+}
+
+section#helloworld p {
+  color: #e8e8e8;
+}
+
+section#eightweek {
+  background-color: #fff;
+  position: relative;
+}
+
+section#eightweek .promo {
+  max-width: 424px;
+  margin: 0 auto;
+  margin-bottom: 80px;
+}
+
+@media print, screen and (min-width: 40em) {
+  section#eightweek .promo {
+    width: auto;
+    margin-right: 50px;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 424px;
+            flex: 0 0 424px;
+    margin-bottom: 0;
+  }
+}
+
+@media print, screen and (min-width: 64em) {
+  section#eightweek .promo {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 434px;
+            flex: 0 0 434px;
+    max-width: 434px;
+  }
+}
+
+section#eightweek .promo .box {
+  background-image: url("/about/images/8w_promo_background_large.png");
+  background-repeat: none;
+  background-position: center;
+  background-size: 404px 582px;
+  height: 582px;
+  padding: 0 40px;
+  padding-top: 350px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 3px 65px 0px rgba(20, 72, 96, 0.09), 0px 3px 40px 0px rgba(20, 72, 96, 0.07), 0px 14px 40px 0px rgba(20, 72, 96, 0.07);
+          box-shadow: 0px 3px 65px 0px rgba(20, 72, 96, 0.09), 0px 3px 40px 0px rgba(20, 72, 96, 0.07), 0px 14px 40px 0px rgba(20, 72, 96, 0.07);
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  section#eightweek .promo .box {
+    background-image: url("/about/images/8w_promo_background_large_2x.png");
+  }
+}
+
+section#eightweek .promo h4 {
+  color: #fff;
+}
+
+section#eightweek .promo p {
+  color: #e8e8e8;
+}
+
+section#eightweek .promo a {
+  color: #ec4e48;
+}
+
+section#eightweek h2 {
+  font-size: 2.3rem;
+  font-weight: 500;
+  margin: 0;
+  line-height: 40px;
+  color: #342b2b;
+}
+
+section#eightweek h4 {
+  color: #ec4e48;
+}
+
+section#eightweek p {
+  color: #342b2b;
+}
+
+section#router {
+  padding: 0;
+  min-height: auto;
+  height: 290px;
+  background-image: url("/about/images/projects_router_large.jpg");
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  position: relative;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  section#router {
+    background-image: url("/about/images/projects_router_large_2x.jpg");
+  }
+}
+
+section#router a:hover figure {
+  -webkit-transform: translate(25px, -25px);
+  transform: translate(25px, -25px);
+}
+
+section#router .grid-container {
+  min-height: auto;
+  padding-top: 45px;
+  padding-bottom: 90px;
+}
+
+section#router figure {
+  background-image: url("/about/images/router_iphones_large.png");
+  background-size: 679px 476px;
+  height: 476px;
+  width: 679px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 150px;
+  -webkit-transition: -webkit-transform .3s;
+  transition: -webkit-transform .3s;
+  transition: transform .3s;
+  transition: transform .3s, -webkit-transform .3s;
+}
+
+@media print, screen and (min-width: 40em) {
+  section#router figure {
+    left: auto;
+  }
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  section#router figure {
+    background-image: url("/about/images/router_iphones_large_2x.png");
+  }
+}
+
+section#router h2 {
+  font-size: 2.3rem;
+  font-weight: 500;
+  margin: 0;
+  line-height: 40px;
+  color: #fff;
+}
+
+section#router h5 {
+  color: #fff;
+}
+
