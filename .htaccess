@@ -1,4 +1,5 @@
 ErrorDocument 404 /404/index.html
+ErrorDocument 403 /404/index.html
 RewriteRule ^.git/ - [L,R=404]
 RewriteRule ^sudo-global/ - [L,R=404]
 Options -indexes
