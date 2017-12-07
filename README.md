@@ -11,9 +11,8 @@ As with any Sudo Project, we'll setup a standard working environment so everyone
 ## Getting started
 
 1. Download and install NPM. (If you want to test you've got it installed, you can run `npm -v` in terminal / command prompt)
-2. Download and install Bower.
 2. Change directory to the sudo.org.au in the console window.
-3. Run `npm update` and `bower update` to install all required dependencies
+3. Run `npm update` to install all required dependencies
 4. Run `npm run watch` to start a local web server and view the website.
 
 ## Contributing
