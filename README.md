@@ -21,6 +21,8 @@ When wanting to make a change to the repo, it's advised that you first hit `fork
 
 The Sudo Website is built on top of [Foundation by Zurb](foundation.zurb.com/sites/). Please [read the docs](foundation.zurb.com/sites/docs/) for any queries you can't seem to find in this README. 
 
+# Advanced
+
 ## Modifying files
 
 When modifying any HTML, feel free to modify anything within it, preview the page in browser (Eg. http://localhost:3000/about/) and then commit it.
