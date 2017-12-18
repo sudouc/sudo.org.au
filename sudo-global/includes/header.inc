@@ -19,6 +19,9 @@
                             <a href="https://blog.sudo.org.au/">Blog</a>
                         </li>
                         <li>
+                            <a href="https://docs.sudo.org.au/">Docs</a>
+                        </li>
+                        <li>
                             <a href="https://discord.gg/sjF2y4G">Discord</a>
                         </li>
                     </ul>
@@ -48,6 +51,9 @@
                             </li>
                             <li>
                                 <a href="https://blog.sudo.org.au/">Blog</a>
+                            </li>
+                            <li>
+                                <a href="https://docs.sudo.org.au/">Docs</a>
                             </li>
                             <li>
                                 <a href="https://discord.gg/sjF2y4G">Discord</a>
