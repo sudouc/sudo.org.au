@@ -9,7 +9,20 @@ $fa-font-path: "./fonts";
 @import '~foundation-sites/scss/foundation';
 @import "~sudo-web-framework/scss/sudoweb";
 
-@include foundation-everything();
+
+
+@include foundation-global-styles;
+@include foundation-xy-grid-classes;
+@include foundation-typography;
+@include foundation-forms;
+@include foundation-button;
+@include foundation-callout;
+@include foundation-card;
+@include foundation-visibility-classes;
+@include foundation-float-classes;
+@include foundation-flex-classes;
+@include foundation-menu;
+
 @include sudo-override();
 
 @import "cards";
