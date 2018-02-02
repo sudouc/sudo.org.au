@@ -19,7 +19,7 @@ As with any Sudo Project, we'll setup a standard working environment so everyone
 
 When wanting to make a change to the repo, it's advised that you first hit `fork` on the GitHub page, so that you effectively take a copy of the original. Once you've made your changes on your own version of the website, you can then submit what's called a `pull request` to allow the owner of the repo to review any changes you may have.
 
-The Sudo Website is built on top of [Foundation by Zurb](foundation.zurb.com/sites/). Please [read the docs](foundation.zurb.com/sites/docs/) for any queries you can't seem to find in this README. 
+The Sudo Website is built on top of [Foundation by Zurb](https://foundation.zurb.com/sites.html). Please [read the docs](https://foundation.zurb.com/sites/docs/) for any queries you can't seem to find in this README.
 
 # Advanced
 
