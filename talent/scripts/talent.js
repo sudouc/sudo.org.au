@@ -1,9 +1,15 @@
-import $ from 'jQuery';
+import $ from 'jquery';
+import {TweenLite} from "gsap";
+import TXT from 'textillate';
 
-(function($) {
+console.log(TXT);
+
+// $.fn.textillate = TXT
+
+(function($, TweenLite) {
 
     var width, height, largeHeader, canvas, ctx, triangles, target, animateHeader = true;
-    var colors = ['72,35,68', '43,81,102', '66,152,103', '250,178,67', '224,33,48'];
+    var colors = ['52, 21, 155', '55, 41, 118', '121, 76, 255', '10, 168, 255'];
 
     // Main
     initHeader();
@@ -15,7 +21,7 @@ import $ from 'jQuery';
         height = window.innerHeight;
         target = {x: 0, y: height};
 
-        largeHeader = $('.grid-x')[0];
+        largeHeader = $('#triangle')[0];
         largeHeader.style.height = height+'px';
 
         canvas = document.getElementById('demo-canvas');
@@ -25,8 +31,8 @@ import $ from 'jQuery';
 
         // create particles
         triangles = [];
-        for(var x = 0; x < 480; x++) {
-            addTriangle(x*10);
+        for(var x = 0; x < 280; x++) {
+            addTriangle(x*100);
         }
     }
 
@@ -44,16 +50,18 @@ import $ from 'jQuery';
 
     function tweenTriangle(tri) {
         var t = Math.random()*(2*Math.PI);
-        var x = (200+Math.random()*100)*Math.cos(t) + width*0.5;
-        var y = (200+Math.random()*100)*Math.sin(t) + height*0.5-20;
-        var time = 4+3*Math.random();
+        var x = (1000+Math.random()*5000)*Math.cos(t) + width*0.5;
+        var y = (1000+Math.random()*5000)*Math.sin(t) + height*0.5-20;
+        var time = 2+2000*Math.random();
 
-        TweenLite.to(tri.pos, time, {x: x,
+        TweenLite.to(tri.pos, time, {
+            x: x,
             y: y, ease:Circ.easeOut,
             onComplete: function() {
                 tri.init();
                 tweenTriangle(tri);
-            }});
+            }
+        });
     }
 
     // Event handling
@@ -107,11 +115,11 @@ import $ from 'jQuery';
             _this.coords[2].y = -10+Math.random()*40;
             _this.scale = 0.1+Math.random()*0.3;
             _this.color = colors[Math.floor(Math.random()*colors.length)];
-            setTimeout(function() { _this.alpha = 0.8; }, 10);
+            setTimeout(function() { _this.alpha = Math.min(Math.random() + 0.2, 0.5); }, 10);
         }
 
         this.draw = function() {
-            if(_this.alpha >= 0.005) _this.alpha -= 0.005;
+            if(_this.alpha >= 0.005) _this.alpha -= 0.0002;
             else _this.alpha = 0;
             ctx.beginPath();
             ctx.moveTo(_this.coords[0].x+_this.pos.x, _this.coords[0].y+_this.pos.y);
@@ -125,4 +133,6 @@ import $ from 'jQuery';
         this.init = init;
     }
 
-})($);
+})($, TweenLite);
+
+// $('h1').textillate({in: { effect: 'fadeInLeft' }})

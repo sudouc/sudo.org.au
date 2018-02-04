@@ -6,7 +6,7 @@
  */
 
 section#hero {
-  background-image: linear-gradient(11deg, #211a3b 0%, #320b62 50%, #211a3b 100%);
+  background-image: linear-gradient(70deg, #211a3b 0%, #2f0b5d 50%, #211a3b 100%);
   width: 100%;
   height: 85vh;
   color: #FFF;
@@ -19,9 +19,10 @@ section#hero:after {
   height: 85vh;
   top: 0;
   position: absolute;
+  background-image: url("/talent/images/talent_bg.jpg");
   background-size: cover;
   background-position: center;
-  opacity: 1;
+  opacity: 0.2;
   z-index: 1;
 }
 
@@ -31,27 +32,39 @@ section#hero .grid-container {
   position: relative;
 }
 
-section#hero .grid-container h1 {
-  background: #9500ff;
-  background: -webkit-gradient(linear, left top, right top, from(#9500ff), color-stop(50%, #c002ff), color-stop(53%, #cd36ff), to(#9500ff));
-  background: linear-gradient(to right, #9500ff 0%, #c002ff 50%, #cd36ff 53%, #9500ff 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  line-height: 25px;
+section#hero .grid-container h5 {
+  color: #9800ff;
+  font-weight: 600;
+  margin-bottom: 50px;
 }
 
-section#hero .grid-container h1 b {
+section#hero .grid-container h1 {
+  background: #9500ff;
+  background: -webkit-gradient(linear, left top, right top, color-stop(15%, #9500ff), color-stop(50%, #c002ff), color-stop(53%, #cd36ff), color-stop(85%, #9500ff));
+  background: linear-gradient(to right, #9500ff 15%, #c002ff 50%, #cd36ff 53%, #9500ff 85%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 30px;
+  line-height: 25px;
   font-weight: 600;
+  display: inline-block;
 }
 
 @media print, screen and (min-width: 40em) {
   section#hero .grid-container h1 {
-    line-height: 50px;
+    font-size: 80px;
+    line-height: 65px;
   }
 }
 
 section#hero .grid-container h3 {
   color: #d1e2ed;
   font-size: 20px;
+}
+
+section#hero #triangle {
+  position: absolute;
+  top: 0;
+  z-index: -10;
 }
 

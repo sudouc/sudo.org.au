@@ -3,7 +3,7 @@
 
 section {
 	&#hero {
-		background-image: linear-gradient( 11deg, #211a3b 0%, #320b62 50%, #211a3b 100%);
+		background-image: linear-gradient( 70deg, #211a3b 0%, #2f0b5d 50%, #211a3b 100%);
 		$content-height: 85vh;
 
 		width: 100%;
@@ -17,10 +17,10 @@ section {
 			height: $content-height;
 			top: 0;
 			position: absolute;
-			// background-image: url("/home/images/home-background.jpg");
+			background-image: url("/talent/images/talent_bg.jpg");
 			background-size: cover;
 			background-position: center;
-			opacity: 1;
+			opacity: 0.2;
 			z-index: 1;
 		}
 
@@ -29,20 +29,27 @@ section {
 			z-index: 2;
 			position: relative;
 
+			h5 {
+				color: #9800ff;
+				font-weight: 600;
+				margin-bottom: 50px;
+			}
+
 			h1 {
 				// color: #b100ff;
 				background: rgba(149,0,255,1);
-				background: -webkit-linear-gradient(left, rgba(149,0,255,1) 0%, rgba(192,2,255,1) 50%, rgb(211, 92, 255) 53%, rgba(149,0,255,1) 100%);
-				background: linear-gradient(to right, rgba(149,0,255,1) 0%, rgba(192,2,255,1) 50%, rgba(205,54,255,1) 53%, rgba(149,0,255,1) 100%);
+				background: -webkit-linear-gradient(left, rgba(149,0,255,1) 15%, rgba(192,2,255,1) 50%, rgb(211, 92, 255) 53%, rgba(149,0,255,1) 85%);
+				background: linear-gradient(to right, rgba(149,0,255,1) 15%, rgba(192,2,255,1) 50%, rgba(205,54,255,1) 53%, rgba(149,0,255,1) 85%);
 				-webkit-background-clip: text;
 				-webkit-text-fill-color: transparent;
+				font-size: 30px;
 				line-height: 25px;
+				font-weight: 600;
+				display: inline-block;
 
-				b {
-					font-weight: 600;
-				}
 				@include breakpoint(medium) {
-					line-height: 50px;
+					font-size: 80px;
+					line-height: 65px;
 				}
 			}
 
@@ -50,6 +57,11 @@ section {
 				color: #d1e2ed;
 				font-size: 20px;
 			}
+		}
+		#triangle {
+			position: absolute;
+			top: 0;
+			z-index: -10;
 		}
 	}
 }

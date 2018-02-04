@@ -43,5 +43,9 @@
   "author": "Alex <chess2ryme@gmail.com>",
   "license": "MIT",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "gsap": "^1.20.3",
+    "textillate": "^0.4.1",
+    "jquery": "latest"
+  }
 }
