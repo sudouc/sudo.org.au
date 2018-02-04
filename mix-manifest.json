@@ -4,8 +4,10 @@
     "/about/styles/about.css": "/about/styles/about.css",
     "/home/styles/home.css": "/home/styles/home.css",
     "/projects/styles/projects.css": "/projects/styles/projects.css",
-    "/vote/styles/vote.css": "/vote/styles/vote.css",
     "/sponsorship/styles/sponsorship.css": "/sponsorship/styles/sponsorship.css",
     "/sudo-global/styles/sudo-global.css": "/sudo-global/styles/sudo-global.css",
-    "/vote/scripts/min/vote.min.js": "/vote/scripts/min/vote.min.js"
+    "/talent/styles/talent.css": "/talent/styles/talent.css",
+    "/vote/styles/vote.css": "/vote/styles/vote.css",
+    "/vote/scripts/min/vote.min.js": "/vote/scripts/min/vote.min.js",
+    "/talent/scripts/min/talent.min.js": "/talent/scripts/min/talent.min.js"
 }

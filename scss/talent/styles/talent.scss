@@ -1,0 +1,55 @@
+@import "~sudo-web-framework/scss/sudoweb";
+@import "scss/sudo-global/styles/settings";
+
+section {
+	&#hero {
+		background-image: linear-gradient( 11deg, #211a3b 0%, #320b62 50%, #211a3b 100%);
+		$content-height: 85vh;
+
+		width: 100%;
+		height: $content-height;
+		color: #FFF;
+
+		&:after {
+			display: block;
+			content: "";
+			width: 100%;
+			height: $content-height;
+			top: 0;
+			position: absolute;
+			// background-image: url("/home/images/home-background.jpg");
+			background-size: cover;
+			background-position: center;
+			opacity: 1;
+			z-index: 1;
+		}
+
+		.grid-container {
+			height: calc(100%);
+			z-index: 2;
+			position: relative;
+
+			h1 {
+				// color: #b100ff;
+				background: rgba(149,0,255,1);
+				background: -webkit-linear-gradient(left, rgba(149,0,255,1) 0%, rgba(192,2,255,1) 50%, rgb(211, 92, 255) 53%, rgba(149,0,255,1) 100%);
+				background: linear-gradient(to right, rgba(149,0,255,1) 0%, rgba(192,2,255,1) 50%, rgba(205,54,255,1) 53%, rgba(149,0,255,1) 100%);
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+				line-height: 25px;
+
+				b {
+					font-weight: 600;
+				}
+				@include breakpoint(medium) {
+					line-height: 50px;
+				}
+			}
+
+			h3 {
+				color: #d1e2ed;
+				font-size: 20px;
+			}
+		}
+	}
+}

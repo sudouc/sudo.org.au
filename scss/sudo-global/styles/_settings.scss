@@ -44,10 +44,14 @@ $sudo-gradient-palette: (
                 #8ebd39,
                 #2e8c12
         ),
+        "talent": (
+                #211a3b,
+                #430e7e
+        ),
         "sudobg": (
                 rgba(145,26,255,1),
                 rgba(61,193,255,1)
-        )
+        ),
 );
 
 @include add-foundation-colors;

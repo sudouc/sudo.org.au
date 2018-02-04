@@ -54,9 +54,10 @@ mix.webpackConfig({
      [ 'about', 'about' ],
 	 [ 'home', 'home' ],
 	 [ 'projects', 'projects' ],
-	 [ 'vote', 'vote' ],
      [ 'sponsorship', 'sponsorship' ],
 	 [ 'sudo-global', 'sudo-global' ],
+     [ 'talent', 'talent' ],
+     [ 'vote', 'vote' ],
 ]
 
 var fip = { includePaths: ['node_modules/foundation-sites/scss/', 'scss/sudo-global/styles/']};
@@ -76,6 +77,7 @@ var fip = { includePaths: ['node_modules/foundation-sites/scss/', 'scss/sudo-glo
 /* Folder, Name */
 var scripts = [
 	[ 'sudo-global', 'sudo-global' ],
+    [ 'talent', 'talent' ],
     [ 'vote', 'vote' ],
 ]
 

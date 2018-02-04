@@ -8923,6 +8923,27 @@ h6.alert {
   background-image: -ms-linear-gradient(11deg, #a7bd39 0%, #5d8c12 100%);
 }
 
+.button.talent {
+  background: #211a3b;
+  /* Old browsers */
+  background-image: linear-gradient(11deg, #211a3b 0%, #430e7e 100%);
+  background-image: -ms-linear-gradient(11deg, #211a3b 0%, #430e7e 100%);
+}
+
+.button.talent:hover {
+  background: #211a3b;
+  /* Old browsers */
+  background-image: linear-gradient(11deg, #211a3b 0%, #430e7e 100%);
+  background-image: -ms-linear-gradient(11deg, #211a3b 0%, #430e7e 100%);
+}
+
+.button.talent:hover:hover {
+  background: #531a3b;
+  /* Old browsers */
+  background-image: linear-gradient(11deg, #531a3b 0%, #6d0e7e 100%);
+  background-image: -ms-linear-gradient(11deg, #531a3b 0%, #6d0e7e 100%);
+}
+
 .button.sudobg {
   background: #911aff;
   /* Old browsers */
