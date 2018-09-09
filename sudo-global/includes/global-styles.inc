@@ -13,7 +13,7 @@
 <link rel="icon" type="image/png" href="/sudo-global/favicon/favicon-32x32.png" sizes="32x32" />
 <link rel="icon" type="image/png" href="/sudo-global/favicon/favicon-16x16.png" sizes="16x16" />
 <link rel="icon" type="image/png" href="/sudo-global/favicon/favicon-128.png" sizes="128x128" />
-<meta name="application-name" content="Sudo – UC’s premiere Kickstarting and Coding Society"/>
+<meta name="application-name" content="Sudo – UC’s premiere Kickstarting and Coding Organisation"/>
 <meta name="msapplication-TileColor" content="#FFFFFF" />
 <meta name="msapplication-TileImage" content="https://sudo.org.au/mstile-144x144.png" />
 <meta name="msapplication-square70x70logo" content="https://sudo.org.au/mstile-70x70.png" />
