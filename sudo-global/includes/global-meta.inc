@@ -13,6 +13,6 @@
 <link rel="index" href="https://sudo.org.au/" />
 
 
-<!--#set var="registerURL" value="http://platform.sudo.org.au/register" -->
-<!--#set var="signInURL" value="http://platform.sudo.org.au/login" -->
+<!--#set var="registerURL" value="https://platformapp.io/sudo/create/" -->
+<!--#set var="signInURL" value="https://platformapp.io/sudo/login/" -->
 <!--#set var="footerType" value="" -->

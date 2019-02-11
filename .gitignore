@@ -8,3 +8,6 @@ custom-hosts
 .tag*
 npm-debug.log
 .idea/
+hot
+
+mix-manifest\.json
