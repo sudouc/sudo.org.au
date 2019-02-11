@@ -1,11 +1,4 @@
 {
     "/sudo-global/scripts/min/sudo-global.min.js": "/sudo-global/scripts/min/sudo-global.min.js",
-    "/404/styles/404.css": "/404/styles/404.css",
-    "/about/styles/about.css": "/about/styles/about.css",
-    "/home/styles/home.css": "/home/styles/home.css",
-    "/projects/styles/projects.css": "/projects/styles/projects.css",
-    "/vote/styles/vote.css": "/vote/styles/vote.css",
-    "/sponsorship/styles/sponsorship.css": "/sponsorship/styles/sponsorship.css",
-    "/sudo-global/styles/sudo-global.css": "/sudo-global/styles/sudo-global.css",
     "/vote/scripts/min/vote.min.js": "/vote/scripts/min/vote.min.js"
 }
