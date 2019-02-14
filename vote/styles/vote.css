@@ -97,7 +97,6 @@ section#voting .vue-slider-component .vue-slider-process {
 }
 
 section#voting .selection {
-  -webkit-transition: background 0.2s, color 0.2s, border 0.2s;
   transition: background 0.2s, color 0.2s, border 0.2s;
   width: 100%;
   margin: 20px 0;
@@ -112,7 +111,7 @@ section#voting .selection.voted {
 }
 
 section#voting .selection.voted:before {
-  content: '\27E9    ';
+  content: "\27E9    ";
 }
 
 section#voting .selection.disabled {

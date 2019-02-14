@@ -149,7 +149,7 @@ section#languages figure {
   }
 }
 
-@media screen and (min-width: 40em) and (-webkit-min-device-pixel-ratio: 2), print and (-webkit-min-device-pixel-ratio: 2), print and (min-resolution: 192dpi), screen and (min-width: 40em) and (min-resolution: 192dpi) {
+@media print and (-webkit-min-device-pixel-ratio: 2), print and (min-resolution: 192dpi), screen and (min-width: 40em) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 40em) and (min-resolution: 192dpi) {
   section#languages figure {
     background-image: url("/about/images/languages_logo_large_2x.png");
   }
@@ -248,18 +248,14 @@ section#eightweek .promo {
   section#eightweek .promo {
     width: auto;
     margin-right: 50px;
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 424px;
-            flex: 0 0 424px;
+    flex: 0 0 424px;
     margin-bottom: 0;
   }
 }
 
 @media print, screen and (min-width: 64em) {
   section#eightweek .promo {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 434px;
-            flex: 0 0 434px;
+    flex: 0 0 434px;
     max-width: 434px;
   }
 }
@@ -273,8 +269,7 @@ section#eightweek .promo .box {
   padding: 0 40px;
   padding-top: 350px;
   border-radius: 5px;
-  -webkit-box-shadow: 0px 3px 65px 0px rgba(20, 72, 96, 0.09), 0px 3px 40px 0px rgba(20, 72, 96, 0.07), 0px 14px 40px 0px rgba(20, 72, 96, 0.07);
-          box-shadow: 0px 3px 65px 0px rgba(20, 72, 96, 0.09), 0px 3px 40px 0px rgba(20, 72, 96, 0.07), 0px 14px 40px 0px rgba(20, 72, 96, 0.07);
+  box-shadow: 0px 3px 65px 0px rgba(20, 72, 96, 0.09), 0px 3px 40px 0px rgba(20, 72, 96, 0.07), 0px 14px 40px 0px rgba(20, 72, 96, 0.07);
 }
 
 @media screen and (-webkit-min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
@@ -348,10 +343,9 @@ section#router figure {
   top: 0;
   right: 0;
   left: 150px;
-  -webkit-transition: -webkit-transform .3s;
-  transition: -webkit-transform .3s;
-  transition: transform .3s;
-  transition: transform .3s, -webkit-transform .3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
 }
 
 @media print, screen and (min-width: 40em) {
