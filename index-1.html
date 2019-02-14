@@ -1,0 +1,53 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Unknown </title></head><body>
+<h1 id="sudo-web-a-sudoorgau">Sudo Web â€“ sudo.org.au</h1>
+<h2 id="introduction">Introduction</h2>
+<p>This is the source code for http://sudo.org.au. It's built on plain HTML, JS and Sass CSS Compiler.</p>
+<p>As with any Sudo Project, we'll setup a standard working environment so everyone can work on the same playing field. For more information on Laravel Mix, visit https://laravel.com/docs/5.4/mix</p>
+<h2 id="getting-started">Getting started</h2>
+<ol>
+<li>Download and install NPM. (If you want to test you've got it installed, you can run <code>npm -v</code> in terminal / command prompt)</li>
+<li>Change directory to the sudo.org.au in the console window.</li>
+<li>Run <code>npm update</code> to install all required dependencies</li>
+<li>Run <code>npm run watch</code> to start a local web server and view the website.</li>
+</ol>
+<h2 id="contributing">Contributing</h2>
+<p>When wanting to make a change to the repo, it's advised that you first hit <code>fork</code> on the GitHub page, so that you effectively take a copy of the original. Once you've made your changes on your own version of the website, you can then submit what's called a <code>pull request</code> to allow the owner of the repo to review any changes you may have.</p>
+<p>The Sudo Website is built on top of <a href="https://foundation.zurb.com/sites.html">Foundation by Zurb</a>. Please <a href="https://foundation.zurb.com/sites/docs/">read the docs</a> for any queries you can't seem to find in this README.</p>
+<h1 id="advanced">Advanced</h1>
+<h2 id="modifying-files">Modifying files</h2>
+<p>When modifying any HTML, feel free to modify anything within it, preview the page in browser (Eg. http://localhost:3000/about/) and then commit it.</p>
+<p>For SCSS and JS files, it get's a little bit more complex. <strong>Do not modify any <code>*-min.js</code> or <code>*.css</code> files, as they will be quickly overwritten</strong>. Only modify <em>.js and </em>.scss files to edit the Javascript and Stylesheets respectively.</p>
+<h3 id="scss">SCSS</h3>
+<p>Each page has it's own SCSS file &amp; it should describe the looks of the page. Feel free to copy other directories to make a new section.</p>
+<p>If you have any syntax errors, rest assured you will get an error from the console saying why it can't compile it.</p>
+<h3 id="js">JS</h3>
+<p>Javascript is written in ES2015 / ES6. It may look quite different to normal JS, but don't worry. You can write normal JS and everything should compile just fine. </p>
+<p>If you want to learn more about ES2016, have a look at https://laracasts.com/series/es6-cliffsnotes/episodes/3</p>
+<p>Similar to SCSS, if you have any syntax errors, it will give you errors and you won't be able to compile it!</p>
+<h2 id="adding-scripts-styles">Adding Scripts / Styles</h2>
+<p>Each SCSS and JS file, compiles down to it's own CSS and 'Minified JS' file respectively. They both have different naming schemes and end up in different locations. Use the scheme below to understand how one file changes:</p>
+<p><strong>SCSS to CSS looks like this:</strong></p>
+<p><code>/scss/{PAGENAME}/styles/{PAGENAME}.scss &gt; /{PAGENAME}/styles/{PAGENAME}.css</code></p>
+<p><strong>JS to 'Minified JS' looks like this:</strong></p>
+<p><code>/{PAGENAME}/scripts/{PAGENAME}.js &gt; /{PAGENAME}/scripts/{PAGENAME}-min.js</code></p>
+<h3 id="note">Note:</h3>
+<p>When adding scripts / styles in regards to new pages, remember to add to the styles / scripts array in the <code>webpack.mix.js</code> file. This is the file that allows the compiler to know which files need transpiling and which it should leave alone.</p>
+<p>```js</p>
+<p>/*<em>
+ * Sudo Styles
+ </em>/</p>
+<p>/<em> Folder, Name </em>/
+ var styles = [
+    [ 'about', 'about' ],
+]</p>
+<p>```</p>
+<p>```js</p>
+<p>/*<em>
+ * Sudo Script
+ </em>/</p>
+<p>/<em> Folder, Name </em>/
+var scripts = [
+    // [ 'about', 'about' ],
+]</p>
+<p>```</p>
+</body></html>
